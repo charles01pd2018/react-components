@@ -1,7 +1,10 @@
-import '../styles/globals.css'
+// styles
+import '../styles/styles.scss'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+const ReactComponentsApp = ({ Component, pageProps }) => {
+  return (
+    <Component {...pageProps} />
+  );
 }
 
-export default MyApp;
+export default ReactComponentsApp;

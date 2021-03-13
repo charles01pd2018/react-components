@@ -1,12 +1,18 @@
+// components
+import Header from '../../components/header';
+import Footer from '../../components/footer';
+
 const DefaultLayout = ({
     children
 }) => {
 
     return (
         <>
-            <main className='site-content'>{children}</main>
+            <Header />
+                <main className='site-content'>{children}</main>
+            <Footer />
         </>
-    )
+    );
 }
 
 export default DefaultLayout;
