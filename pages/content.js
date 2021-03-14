@@ -16,9 +16,9 @@ const Content = ({
                     <title>React Components Template</title>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
-                
-                <Hero heroText='React Components Reference' descriptionText='I want to see what Verdana looks like in paragraph form' />
-                <Panels />
+
+                  <Hero heroText='React Components Reference' descriptionText='I want to see what Verdana looks like in paragraph form' />
+                  <Panels />
         </DefaultLayout>
   );
 }
