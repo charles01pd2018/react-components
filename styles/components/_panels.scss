@@ -1,0 +1,21 @@
+.panels {
+    display: flex;
+    justify-content: space-between;
+
+    border: 5px solid black;
+
+    .card {
+        overflow: hidden;
+        flex-basis: 45%;
+
+        border: 3px solid blue;
+        border-radius: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 480px)
+                    and (max-width: 767px) {
+                        .col {
+                            width: 44%;
+                        }
+                    }

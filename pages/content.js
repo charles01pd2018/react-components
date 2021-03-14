@@ -1,23 +1,24 @@
 // dependencies
 import Head from 'next/head';
 
-// pages
+// layout
 import DefaultLayout from './layout/defaultLayout';
+
+// components
+import Hero from '../components/Hero';
+import Panels from '../components/panels';
 
 const Content = ({
 }) => {
   return (
         <DefaultLayout>
-            <div className="container">
                 <Head>
                     <title>React Components Template</title>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
-
-                <h1 className="title">
-                    React Components Reference
-                </h1>
-            </div>
+                
+                <Hero heroText='React Components Reference' descriptionText='I want to see what Verdana looks like in paragraph form' />
+                <Panels />
         </DefaultLayout>
   );
 }
