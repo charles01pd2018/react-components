@@ -6,7 +6,7 @@ import DefaultLayout from './layout/defaultLayout';
 
 // components
 import Hero from '../components/Hero';
-import Panels from '../components/panels';
+import GridPanel from '../components/grid-panel';
 
 const Content = ({
 }) => {
@@ -18,7 +18,7 @@ const Content = ({
                 </Head>
 
                   <Hero heroText='React Components Reference' descriptionText='I want to see what Verdana looks like in paragraph form' />
-                  <Panels />
+                  <GridPanel />
         </DefaultLayout>
   );
 }
