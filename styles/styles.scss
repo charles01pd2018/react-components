@@ -1,5 +1,8 @@
 // global styles
 @import "base", "globals";
 
+// layout
+@import "layout/header";
+
 // components
-@import "components/header", "components/gridPanel", "components/hero";
+@import "components/gridPanel", "components/hero";
