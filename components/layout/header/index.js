@@ -4,9 +4,9 @@ import { navLinks } from './content';
 const Header = () => {
 
     return (
-        <section className='nav-container'>
-            <div className='container'>
-                <header className='navbar'>
+        <section className='header-container'>
+            <div className='header-wrapper'>
+                <header className='header'>
                         fdalk
                 </header>
             </div>
