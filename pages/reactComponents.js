@@ -5,10 +5,11 @@ import Head from 'next/head';
 import DefaultLayout from './layout/defaultLayout';
 
 // components
-import Hero from '../components/Hero';
+import Hero from '../components/hero/hero';
 import GridPanel from '../components/grid-panel';
 
-const Content = ({
+
+const ReactComponents = ({
 }) => {
   return (
         <DefaultLayout>
@@ -17,10 +18,10 @@ const Content = ({
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
 
-                  <Hero heroText='React Components Reference' descriptionText='I want to see what Verdana looks like in paragraph form' />
+                  <Hero />
                   <GridPanel />
         </DefaultLayout>
   );
 }
 
-export default Content;
+export default ReactComponents;

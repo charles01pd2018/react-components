@@ -1,13 +1,15 @@
+// content
+import { HeroContent } from './content';
+
 const Hero = ({
-    heroText,
-    descriptionText
+
 }) => {
 
     return (
         <section className='container'>
             <div className='hero'>
-                <h1>{heroText}</h1>
-                <p>{descriptionText}</p>
+                <h1>{HeroContent.title}</h1>
+                <p>{HeroContent.description}</p>
             </div>
         </section>
     );

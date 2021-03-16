@@ -1,10 +1,10 @@
 // pages
-import Content from './content';
+import ReactComponents from './reactComponents';
 
 const Home = ({
 }) => {
   return (
-    <Content />
+    <ReactComponents />
   );
 }
 
