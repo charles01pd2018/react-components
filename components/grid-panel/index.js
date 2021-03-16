@@ -15,7 +15,7 @@ const GridPanel = ({
                 <div className='panel-grid'>
                     {
                        GridPanelContent.map( ({ cardHeader, cardDescription }) => (
-                           <Card cardHeader={cardHeader} cardDescription={cardDescription} />
+                           <Card cardHeader={cardHeader} cardDescription={cardDescription} key={cardHeader} />
                        ))
                     }
                 </div>
