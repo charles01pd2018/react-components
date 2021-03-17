@@ -7,6 +7,7 @@ import DefaultLayout from './layout/defaultLayout';
 // components
 import Hero from '../components/hero/hero';
 import GridPanel from '../components/grid-panel';
+import FlexPanel from '../components/flex-panel'
 
 
 const ReactComponents = ({
@@ -20,6 +21,7 @@ const ReactComponents = ({
 
                   <Hero />
                   <GridPanel />
+                  <FlexPanel />
         </DefaultLayout>
   );
 }
