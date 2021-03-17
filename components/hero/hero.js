@@ -1,7 +1,7 @@
 // content
-import { HeroContent } from './content';
+import { HeroContent, WaveHeroContent } from './content';
 
-const Hero = ({
+export const Hero = ({
 
 }) => {
 
@@ -15,4 +15,22 @@ const Hero = ({
     );
 }
 
-export default Hero;
+export const WaveHero = ({
+
+}) => {
+
+    return (
+        <section className='container'>
+            <div className='hero-wave-wrapper'>
+                <div className='hero-wave-content'>
+                    <h1 className='hero-wave-content-title'>{WaveHeroContent.title}</h1>
+                    <p className='hero-wave-content-description'>{WaveHeroContent.description}</p>
+                </div>
+
+                <div className='hero-wave-visual-wrapper'>
+                    <img src="/favicon.svg" alt="pofo Logo" className='hero-wave-visual-image' />
+                </div>
+            </div>
+        </section>
+    );
+}

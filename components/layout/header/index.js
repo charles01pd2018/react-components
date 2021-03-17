@@ -1,15 +1,17 @@
 //content
 import { navLinks } from './content';
 
-const Header = () => {
+const Header = ({
+
+}) => {
 
     return (
         <section className='header-container'>
-            <div className='header-wrapper'>
-                <header className='header'>
-                        fdalk
-                </header>
-            </div>
+            <header className='header-wrapper'>
+                <div className='header-branding'>
+                    <h1 className='header-branding-title'>pofo</h1>
+                </div>
+            </header>
         </section>
     );
 }

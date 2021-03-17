@@ -13,6 +13,7 @@
         4 cards - 18em
         */
         width: 25em;
+        flex-grow: 1;
         border: 2px solid var(--main-color);
         box-shadow: 0.1em 0.1em 1.5em var(--main-color); // can substitute this with any color
         border-radius: 1em;

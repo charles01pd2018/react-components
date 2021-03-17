@@ -1,3 +1,34 @@
 .hero-wrapper {
 
 }
+
+.hero-wave-wrapper {
+    display: flex;
+    text-align: left;
+    height: 85vh;
+    padding: 7rem 0; // vertically align
+
+    border: 5px solid red;
+
+    .hero-wave-content {
+        flex-basis: 65%;
+        line-height: 5rem;
+
+        border: 5px solid green;
+
+        .hero-wave-content-title {
+            color: blue;
+        }
+
+        .hero-wave-content-description {
+            padding-left: 2rem;
+            color: lightcoral;
+        }
+    }
+
+    .hero-wave-visual-wrapper {
+
+        .hero-wave-visual-image {
+        }
+    }
+}

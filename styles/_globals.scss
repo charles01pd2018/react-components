@@ -6,6 +6,28 @@
   --main-background: #F5FFA0; // light-yellow - rgb(245, 255, 160)
 }
 
+/*  !!! SCROLL BAR !! */ 
+// firefox
+* {
+  scrollbar-width: 1.3rem;
+  scrollbar-color: var(--main-color) var(--main-background);
+}
+
+// chrome, edge, safari
+*::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--main-background);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border: 3px solid var(--middle-color);
+}
+
+
 html,
 body {
   font-family: Verdana; 
