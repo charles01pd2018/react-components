@@ -32,7 +32,6 @@ export const WaveHero = ({
                         Site Logo
                     </object>
                 </div>
-
             </div>
         </section>
     );
