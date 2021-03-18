@@ -2,18 +2,23 @@
     display: grid;
     /*
         1024px screen:
-        2 cards - 27em
-        3 cards - 21em
-        4 cards - 18em
+        2 cards - 26rem
+        3 cards - 19rem
+        4 cards - 17rem
     */
-    grid-template-columns: repeat(auto-fill, minmax(21em, 1fr));
-    gap: 1em;
-    border-radius: 1.5em;
+    grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
+    gap: 1rem;
+    border-radius: 1.5rem;
+
+    // mobile - prevent overflow to the right
+    @media (max-width: 800px) {
+        grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    }
 
     .grid-panel-card {
-        min-height: 20em;
-        box-shadow: 0.25em 0.25em 2em rgba(0, 0, 0, 0.25); // can substitute this with any color
-        border-radius: 1em;
-        padding: 1.5em;
+        min-height: 20rem;
+        box-shadow: 0.25rem 0.25rem 2rem rgba(0, 0, 0, 0.25); // can substitute this with any color
+        border-radius: 1rem;
+        padding: 1.5rem;
     }
 }
