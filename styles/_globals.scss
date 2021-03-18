@@ -59,8 +59,28 @@ p {
   font-size: 1.15em;
 }
 
+// tablet (5% smaller than Desktop)
+@media(max-width: 1025px) {
+  h1 {
+    font-size: 2.85em;
+  }
+  
+  h2 {
+    font-size: 2.375em;
+  }
+  
+  p {
+    font-size: 1.0925em;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 // mobile (10% smaller than Desktop)
-@media(max-width: 700px) {
+@media(max-width: 800px) {
   h1 {
     font-size: 2.7em;
   }

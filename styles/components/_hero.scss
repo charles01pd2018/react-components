@@ -4,16 +4,15 @@
 
 .hero-wave-wrapper {
     display: flex;
-    text-align: left;
-    height: 85vh;
     padding: 7rem 0; // vertically align
 
-    background-image: linear-gradient( to right, var(--main-color), var(--main-background) );
-    background-image: radial-gradient( circle at top right, var(--main-background), var(--main-color) 100% );
+    background-image: linear-gradient( to right, var(--main-color), var(--main-background) ); // left-to-right gradient
+    background-image: radial-gradient( circle at top right, var(--main-background), var(--main-color) 100% ); // sunshine gradient
 
     border: 5px solid red;
 
     .hero-wave-content {
+        text-align: left;
         flex-basis: 65%;
         line-height: 5rem;
 
@@ -25,19 +24,44 @@
         .hero-wave-content-description {
             padding-left: 2rem;
         }
-    }
 
-    .hero-wave-visual-wrapper {
-        
-        .hero-wave-visual-image {
-            width: 25rem;
-            height: 25rem;
+        @media (max-width: 1025px) {
+            line-height: 4rem;
         }
     }
 
-    @media(max-width: 700px) {
-        flex-direction: column;
+    .hero-wave-visual-wrapper {
+        flex-basis: 35%;
 
-        
+        .hero-wave-visual-image {
+            min-width: 25rem;
+            min-height: 25rem;
+
+            @media (max-width: 1025px) {
+                /* !!! STOP THE SHRINKING !!! */
+                min-width: 20rem;
+                min-height: 20rem;
+            }
+
+            @media (max-width: 900px) {
+                /* !!! PIC TOO BIG !!! */
+                min-width: 18rem;
+                min-height: 18rem;
+            }
+        }
+    }
+
+    @media(max-width: 800px) {
+        flex-direction: column;
+        padding: 2rem 0;
+
+        .hero-wave-visual-wrapper {
+            order: -1;
+
+            .hero-wave-visual-image {
+                max-width: 27rem;
+                max-height: 27rem;
+            }
+        }
     }
 }
