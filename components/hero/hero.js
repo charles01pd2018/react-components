@@ -20,17 +20,19 @@ export const WaveHero = ({
 }) => {
 
     return (
-        <section className='container'>
-            <div className='hero-wave-wrapper'>
-                <div className='hero-wave-content'>
-                    <h1 className='hero-wave-content-title'>{WaveHeroContent.title}</h1>
-                    <p className='hero-wave-content-description'>{WaveHeroContent.description}</p>
-                </div>
+        <section className='hero-wave-background'>
+            <div className='container'>
+                <div className='hero-wave-wrapper'>
+                    <div className='hero-wave-content'>
+                        <h1 className='hero-wave-content-title'>{WaveHeroContent.title}</h1>
+                        <p className='hero-wave-content-description'>{WaveHeroContent.description}</p>
+                    </div>
 
-                <div className='hero-wave-visual-wrapper'>
-                    <object type="image/svg+xml" data='/favicon.svg' className='hero-wave-visual-image' >
-                        Site Logo
-                    </object>
+                    <div className='hero-wave-visual-wrapper'>
+                        <object type="image/svg+xml" data='/favicon.svg' className='hero-wave-visual-image' >
+                            Site Logo
+                        </object>
+                    </div>
                 </div>
             </div>
         </section>
