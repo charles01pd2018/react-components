@@ -6,7 +6,9 @@
   --main-background: #F5FFA0; // light-yellow - rgb(245, 255, 160)
 }
 
-/*  !!! SCROLL BAR !! */ 
+/*--------------------------------------------------------------
+# Scroll Bar
+--------------------------------------------------------------*/
 // firefox
 * {
   scrollbar-width: 1.3rem;
@@ -27,7 +29,19 @@
   border: 3px solid var(--middle-color);
 }
 
+/*--------------------------------------------------------------
+# Highlight Text Color
+--------------------------------------------------------------*/
+::selection {
+  background: var(--main-background); // WebKit/Blink Browsers
+}
+::-moz-selection {
+  background: var(--main-background); // Gecko Browsers
+}
 
+/*--------------------------------------------------------------
+# Site Variables
+--------------------------------------------------------------*/
 html,
 body {
   font-family: Verdana; 
@@ -45,11 +59,29 @@ p {
   font-size: 1.15em;
 }
 
+// mobile (10% smaller than Desktop)
+@media(max-width: 700px) {
+  h1 {
+    font-size: 2.7em;
+  }
+  
+  h2 {
+    font-size: 2.25em;
+  }
+  
+  p {
+    font-size: 1.035em;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/*--------------------------------------------------------------
+# Site Customization
+--------------------------------------------------------------*/
 * {
   box-sizing: border-box;
 }
