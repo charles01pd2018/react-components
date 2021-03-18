@@ -5,19 +5,18 @@
     border-radius: 1.5em;
 
     .flex-panel-card {
-    /*
-        1024px screen:
-        2 cards - 26rem
-        3 cards - 19rem
-        4 cards - 17rem
-    */
-    width: 26em;
-    flex-grow: 1;
-    border: 2px solid var(--main-color);
-    box-shadow: 0.1em 0.1em 1.5em var(--main-color); // can substitute this with any color
-    border-radius: 1em;
-    margin: 1.5em 1em;
-    padding: 1.5em;
-
+        /*
+            1024px screen:
+            2 cards - 26rem
+            3 cards - 19rem
+            4 cards - 17rem
+        */
+        width: 26em;
+        flex-grow: 1;
+        border: 2px solid var(--main-color);
+        box-shadow: 0.1em 0.1em 1.5em var(--main-color); // can substitute this with any color
+        border-radius: 1em;
+        margin: 1.5em 1em;
+        padding: 1.5em;
     }
 }

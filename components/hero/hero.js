@@ -29,7 +29,7 @@ export const WaveHero = ({
                     </div>
 
                     <div className='hero-wave-visual-wrapper'>
-                        <object type="image/svg+xml" data='/favicon.svg' className='hero-wave-visual-image' >
+                        <object type="image/svg+xml" data='/favicon.svg' alt='site-logo' className='hero-wave-visual-image' >
                             Site Logo
                         </object>
                     </div>
