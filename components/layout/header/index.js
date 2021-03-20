@@ -15,8 +15,20 @@ const Header = ({
 
     const [ mobileHeaderActive, setMobileHeaderActive ] = useState(false);
 
-    const handleMobileHeaderToggle = () => {
-        setMobileHeaderActive(!mobileHeaderActive);
+    const closeMobileHeader = () => {
+        document.body.classList.remove('off-nav-is-active');
+        navRef.current && (navRef.current.style.maxHeight = null); // idk what this is for
+        setMobileHeaderActive(false);
+    }
+
+    const openMobileHeader = () => {
+        document.body.classList.add('off-nav-is-active');
+        navRef.current.style.maxHeight = navRef.current.scrollHeight + 'px'; // idk what this is for
+        setMobileHeaderActive(true);
+    }
+
+    const exitKey = (e) => {
+        mobileHeaderActive && e.keyCode === 27 && closeMobileHeader();
     }
 
     // closes menu when the user clicks off the menu
@@ -24,17 +36,12 @@ const Header = ({
         if (!navRef.current) return; // prevent page breakdown in event of a bug
         if (navRef.current.contains(e.target)) return; // don't close on header or nav menu click
         if (e.current === hamburgerRef.current) return; // don't close on hamburger click
-        handleMobileHeaderToggle();
-    }
-
-    const exitKey = (e) => {
-        mobileHeaderActive && e.keyCode === 27 && handleMobileHeaderToggle();
+        closeMobileHeader();
     }
 
     useEffect( () => {
         document.addEventListener('keydown', exitKey);
         document.addEventListener('click', clickOutside);
-        
         return () => {
             document.removeEventListener('keydown', exitKey);
             document.removeEventListener('click', clickOutside);
@@ -50,7 +57,7 @@ const Header = ({
                     </div>
 
                     <nav ref={navRef} className='header-nav-menu'>
-                        <button ref={hamburgerRef} onClick={handleMobileHeaderToggle} className="header-nav-toggle">
+                        <button ref={hamburgerRef} onClick={mobileHeaderActive === true ? closeMobileHeader : openMobileHeader} className="header-nav-toggle">
                             <span className="screen-reader">Menu</span>
                                 <span className="hamburger">
                                     <span className="hamburger-inner"></span>
@@ -63,9 +70,9 @@ const Header = ({
                                     const { mainLinkTitle, mainLinkDestination } = linkObject.mainLink;
                                     return (
                                         <li className='header-list-item'>
-                                            <Link href={mainLinkDestination} classname='header-link'>{mainLinkTitle}</Link>
+                                            <Link href={mainLinkDestination} onClick={closeMobileHeader} classname='header-link'>{mainLinkTitle}</Link>
                                         </li>
-                                    )
+                                    );
                                 })
                             }
                         </ul>

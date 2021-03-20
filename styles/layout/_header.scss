@@ -46,7 +46,7 @@
                 }
             }
             
-            // do not display mobile menu on desktop
+            // do not display mobile menu or hamburger icon on desktop
             .header-nav-toggle {
                 display: none;
                 
@@ -63,15 +63,12 @@
                         top: 100%;
                         background: white;
                         align-items: center;
-                        opacity: 0;
                         overflow: hidden;
-                        height: max-content;
                         padding: 1rem;
-                        // transition: max-height .25s ease-in-out, opacity .15s; ---> TRANSITION NOT FIRING
+                        display: none; // don't show when mobile menu not active
 
-                        // BUG - CURSOR STILL SHOWS WHEN MENU NOT ACTIVE
                         &.header-mobile-active {
-                            opacity: 1;
+                            display: flex;
                         }
                     }
                 }

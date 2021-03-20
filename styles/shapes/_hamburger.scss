@@ -76,7 +76,7 @@ $header-hamburger--color:       var(--main-color);  // color
 
 
     // TRANSITION NOT FIRING BECAUSE CLASS NOT ADDES
-	&.header-mobile-active {
+	.off-nav-is-active & {
 		transform: rotate(225deg);
 		transition-delay: 0.12s;
 		transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
