@@ -3,7 +3,7 @@ import { navLinks } from './content';
 
 // dependencies
 import Link from 'next/link';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import classNames from 'classNames';
 
 const Header = ({
@@ -11,7 +11,7 @@ const Header = ({
 }) => {
 
     const hamburgerRef = useRef(null);
-    const mobileMenuRef = useRef(null);
+    const navRef = useRef(null);
 
     const [ mobileHeaderActive, setMobileHeaderActive ] = useState(false);
 
@@ -20,9 +20,26 @@ const Header = ({
     }
 
     // closes menu when the user clicks off the menu
-    const clickOutside = () => {
-
+    const clickOutside = (e) => {
+        if (!navRef.current) return; // prevent page breakdown in event of a bug
+        if (navRef.current.contains(e.target)) return; // don't close on header or nav menu click
+        if (e.current === hamburgerRef.current) return; // don't close on hamburger click
+        handleMobileHeaderToggle();
     }
+
+    const exitKey = (e) => {
+        mobileHeaderActive && e.keyCode === 27 && handleMobileHeaderToggle();
+    }
+
+    useEffect( () => {
+        document.addEventListener('keydown', exitKey);
+        document.addEventListener('click', clickOutside);
+        
+        return () => {
+            document.removeEventListener('keydown', exitKey);
+            document.removeEventListener('click', clickOutside);
+        }
+    })
 
     return (
         <section className='header-container'>
@@ -32,7 +49,7 @@ const Header = ({
                         <h1 className='header-branding-title'>pofo</h1>
                     </div>
 
-                    <nav className='header-nav-menu'>
+                    <nav ref={navRef} className='header-nav-menu'>
                         <button ref={hamburgerRef} onClick={handleMobileHeaderToggle} className="header-nav-toggle">
                             <span className="screen-reader">Menu</span>
                                 <span className="hamburger">
