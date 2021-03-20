@@ -11,12 +11,7 @@
         background-color: white;
         box-shadow: 2px 5px 2px gray;
         z-index: 99;
-        padding: 0 5rem;
-
-        // move to very left once the screen is smaller than desktop
-        @media (max-width: 1025px) {
-            padding: 0 1.5rem;
-        }
+        padding: 0 1rem;
         
         * {
             height: 100%;
