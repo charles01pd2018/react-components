@@ -17,13 +17,11 @@ const Header = ({
 
     const closeMobileHeader = () => {
         document.body.classList.remove('off-nav-is-active');
-        navRef.current && (navRef.current.style.maxHeight = null); // idk what this is for
         setMobileHeaderActive(false);
     }
 
     const openMobileHeader = () => {
         document.body.classList.add('off-nav-is-active');
-        navRef.current.style.maxHeight = navRef.current.scrollHeight + 'px'; // idk what this is for
         setMobileHeaderActive(true);
     }
 
@@ -69,8 +67,8 @@ const Header = ({
                                 navLinks.map( linkObject => {
                                     const { mainLinkTitle, mainLinkDestination } = linkObject.mainLink;
                                     return (
-                                        <li className='header-list-item'>
-                                            <Link href={mainLinkDestination} onClick={closeMobileHeader} classname='header-link'>{mainLinkTitle}</Link>
+                                        <li key={mainLinkTitle} onClick={closeMobileHeader} className='header-list-item'>
+                                            <Link href={mainLinkDestination} classname='header-link'>{mainLinkTitle}</Link>
                                         </li>
                                     );
                                 })
