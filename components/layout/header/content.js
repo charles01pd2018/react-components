@@ -1,12 +1,7 @@
-export const navLinks = [
-    {
-        title1: ['sublink1', 'sublink2']
-    },
-    {
-        title2: ['sublink1', 'sublink2', 'sublink3', 'sublink4']
-    },
-    {
-        title3: []
-    }
+export const simpleNavLinks = [
+    'Link 1',
+    'Link 2',
+    'Link 3',
+    'Link 4',
+    'Link 5'
 ];
-
