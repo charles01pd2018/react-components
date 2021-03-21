@@ -40,9 +40,15 @@ const Footer = () => {
                         </div>
 
                         <div className='footer-social-bar-wrapper'>
-                                Footer Social Bar
+                            {
+                                footerSocialIcons.map( ({ socialIconType, socialIconPath, socialIconDestination }) => (
+                                    <a key={socialIconType} href={socialIconDestination} target='_blank'>
+                                        <img src={socialIconPath} alt={socialIconType} className='footer-social-icon site-link'/>
+                                    </a>
+                                ))
+                            }
                         </div>
-                        
+
                     </nav>
                 </footer>
         </section>

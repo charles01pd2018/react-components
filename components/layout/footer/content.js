@@ -66,15 +66,13 @@ export const footerNavLinks = [
 
 export const footerSocialIcons = [
     {
-        socialIconType: '',
-        socialIconPath: ''
+        socialIconType: 'Twitter',
+        socialIconPath: '/social/twitter.svg',
+        socialIconDestination: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
     },
     {
-        socialIconType: '',
-        socialIconPath: ''
-    },
-    {
-        socialIconType: '',
-        socialIconPath: ''
+        socialIconType: 'LinkedIn',
+        socialIconPath: '/social/linkedin.svg',
+        socialIconDestination: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
     },
 ];
