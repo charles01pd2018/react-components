@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import classNames from 'classNames';
 
 // content
-import { navLinks } from './content';
+import { headerNavLinks } from './content';
 
 // partials
 import Logo from '../logo';
@@ -68,7 +68,7 @@ const Header = ({
 
                         <ul className={classNames('header-links-wrapper', mobileHeaderActive === true ? 'header-mobile-active' : '')}>
                             {
-                                navLinks.map( linkObject => {
+                                headerNavLinks.map( linkObject => {
                                     const { mainLinkTitle, mainLinkDestination } = linkObject.mainLink;
                                     return (
                                         <li key={mainLinkTitle} onClick={closeMobileHeader} className='header-list-item'>

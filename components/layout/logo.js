@@ -10,7 +10,7 @@ const Logo = ({
             <Link href='/'>
                 <img src='/favicon.svg' alt='site-logo' className='site-logo' />
             </Link>
-            <h1 className='header-branding-title'>{logoTitle}</h1>
+            { logoTitle ? <h1 className='header-branding-title'>{logoTitle}</h1> : ( null ) }
         </>
     );
 }
