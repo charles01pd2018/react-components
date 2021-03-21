@@ -64,10 +64,17 @@
 
                         &.header-mobile-active {
                             display: flex;
+                            animation: drop-down 0.25s linear;
+                            transform-origin: top center;
                         }
                     }
                 }
             }
         }
     }
+}
+
+@keyframes drop-down {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
 }
