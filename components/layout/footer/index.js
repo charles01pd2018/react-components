@@ -16,12 +16,12 @@ const Footer = () => {
                         <Logo />
                     </div>
 
-                    <nav className='container footer-nav-menu'>
+                    <nav className='container'>
                         <div className='footer-category-wrapper'>
                             {
                                 footerNavLinks.map( ({ categoryDescription, categoryLinks }) => {
                                     return (
-                                        <>
+                                        <div className='footer-category'>
                                             <h3 className='footer-category-title'>{categoryDescription}</h3>
 
                                             <ul className='footer-category-links-wrapper'>
@@ -33,16 +33,16 @@ const Footer = () => {
                                                     ) )
                                                 }
                                             </ul>
-                                        </>
+                                        </div>
                                     );
                                 } )
                             }
-
-                            <div className='footer-social-bar-wrapper'>
-                                Footer Social Bar
-                            </div>
-
                         </div>
+
+                        <div className='footer-social-bar-wrapper'>
+                                Footer Social Bar
+                        </div>
+                        
                     </nav>
                 </footer>
         </section>

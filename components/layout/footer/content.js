@@ -61,7 +61,7 @@ export const footerNavLinks = [
                 linkDestination: '' 
             }
         ]
-    }
+    },
 ];
 
 export const footerSocialIcons = [
