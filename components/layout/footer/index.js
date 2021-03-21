@@ -2,7 +2,7 @@
 import Link from 'next/link';
 
 // content
-import { footerNavLinks } from './content';
+import { footerNavLinks, footerSocialIcons } from './content';
 
 // partials
 import Logo from '../logo';
@@ -37,6 +37,11 @@ const Footer = () => {
                                     );
                                 } )
                             }
+
+                            <div className='footer-social-bar-wrapper'>
+                                Footer Social Bar
+                            </div>
+
                         </div>
                     </nav>
                 </footer>

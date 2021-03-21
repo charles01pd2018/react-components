@@ -63,3 +63,18 @@ export const footerNavLinks = [
         ]
     }
 ];
+
+export const footerSocialIcons = [
+    {
+        socialIconType: '',
+        socialIconPath: ''
+    },
+    {
+        socialIconType: '',
+        socialIconPath: ''
+    },
+    {
+        socialIconType: '',
+        socialIconPath: ''
+    },
+];

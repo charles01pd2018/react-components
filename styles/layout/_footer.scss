@@ -27,8 +27,15 @@
 
                     > * {
                         padding: 0.3rem 0;
-                        color: darkslategray
+                        width: max-content;
+                        color: darkslategray;
+
+                        border: 5px solid black;
                     }
+                }
+
+                .footer-social-bar-wrapper {
+                    text-align: right;
                 }
             }
         }
