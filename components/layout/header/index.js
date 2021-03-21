@@ -1,10 +1,14 @@
-// content
-import { navLinks } from './content';
-
 // dependencies
 import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
 import classNames from 'classNames';
+
+// content
+import { navLinks } from './content';
+
+// partials
+import Logo from '../logo';
+
 
 const Header = ({
 
@@ -51,7 +55,7 @@ const Header = ({
             <header className='header-wrapper'>
 
                     <div className='header-branding-wrapper'>
-                        <h1 className='header-branding-title'>pofo</h1>
+                        <Logo logoTitle='pofo' />
                     </div>
 
                     <nav ref={navRef} className='header-nav-menu'>

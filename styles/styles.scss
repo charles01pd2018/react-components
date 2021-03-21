@@ -2,7 +2,7 @@
 @import "base", "globals";
 
 // layout
-@import "layout/header";
+@import "layout/common", "layout/header";
 
 // shapes
 @import "shapes/hamburger";
