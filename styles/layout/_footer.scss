@@ -6,6 +6,17 @@
 
         .footer-nav-menu {
             display: grid;
+
+            .footer-category-wrapper {
+
+                .footer-category-title {
+
+                }
+
+                .footer-category-links-wrapper {
+                    list-style-type: none;
+                }
+            }
         }
     }
 }
