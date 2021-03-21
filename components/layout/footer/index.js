@@ -1,3 +1,6 @@
+// dependencies
+import Link from 'next/link';
+
 // content
 import { footerNavLinks } from './content';
 
@@ -7,16 +10,36 @@ import Logo from '../logo';
 const Footer = () => {
 
     return (
-        <section className='container'>
-            <footer className='footer-wrapper'>
-                <div className='footer-branding-wrapper'>
-                        <Logo logoTitle='' />
-                </div>
+        <section className='footer-container'>
+                <footer className='footer-wrapper'>
+                    <div className='footer-branding-wrapper'>
+                        <Logo />
+                    </div>
 
-                <nav className='footer-nav-menu'>
+                    <nav className='container footer-nav-menu'>
+                        <div className='footer-category-wrapper'>
+                            {
+                                footerNavLinks.map( ({ categoryDescription, categoryLinks }) => {
+                                    return (
+                                        <>
+                                            <h3 className='footer-category-title'>{categoryDescription}</h3>
 
-                </nav>
-            </footer>
+                                            <ul className='footer-category-links-wrapper'>
+                                                {
+                                                    categoryLinks.map( ({ linkTitle, linkDestination }) => (
+                                                        <li className='footer-list-item'>
+                                                            <Link key={linkTitle} href={linkDestination} className='footer-link'>{linkTitle}</Link>
+                                                        </li>
+                                                    ) )
+                                                }
+                                            </ul>
+                                        </>
+                                    );
+                                } )
+                            }
+                        </div>
+                    </nav>
+                </footer>
         </section>
     );
 }

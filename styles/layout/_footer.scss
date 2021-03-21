@@ -1,0 +1,11 @@
+.footer-container {
+    background-color: var(--contrast-color);
+
+    .footer-wrapper {
+        padding: 1rem 1rem;
+
+        .footer-nav-menu {
+            display: grid;
+        }
+    }
+}

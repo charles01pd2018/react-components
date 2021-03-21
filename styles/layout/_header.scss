@@ -42,7 +42,7 @@
 
                     &:hover {
                         animation: pop-out 0.3s ease forwards;
-                        color: gray;
+                        color: var(--link-hover-color);
                     }
                 }
             }
@@ -66,7 +66,7 @@
                         align-items: center;
                         overflow: hidden;
                         padding: 1rem;
-                        border: 3px solid lightblue;
+                        border: 3px solid var(--contrast-color);
 
                         display: none; // don't show when mobile menu not active
 

@@ -14,7 +14,9 @@ const Header = ({
 
 }) => {
 
+    // hamburger icon
     const hamburgerRef = useRef(null);
+    // navigation menu, including mobile nav
     const navRef = useRef(null);
 
     const [ mobileHeaderActive, setMobileHeaderActive ] = useState(false);
