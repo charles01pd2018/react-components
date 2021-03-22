@@ -42,5 +42,14 @@
                 padding: 1rem;
             }
         }
+
+        .footer-copyright-statement {
+            text-align: center;
+
+            .footer-small-text {
+                font-size: 0.9rem;
+                color: var(--font-contrast-color);
+            }
+        }
     }
 }

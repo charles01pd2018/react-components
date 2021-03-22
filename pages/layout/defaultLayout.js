@@ -2,15 +2,18 @@
 import Header from '../../components/layout/header';
 import Footer from '../../components/layout/footer';
 
+// content
+const siteTitle = 'pofo';
+
 const DefaultLayout = ({
     children
 }) => {
 
     return (
         <>
-            <Header />
+            <Header siteTitle={siteTitle}/>
                 <main className='site-content'>{children}</main>
-            <Footer />
+            <Footer siteTitle={siteTitle} />
         </>
     );
 }

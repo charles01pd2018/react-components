@@ -7,7 +7,9 @@ import { footerNavLinks, footerSocialIcons } from './content';
 // partials
 import Logo from '../logo';
 
-const Footer = () => {
+const Footer = ({
+    siteTitle
+}) => {
 
     return (
         <section className='footer-container'>
@@ -21,7 +23,7 @@ const Footer = () => {
                             {
                                 footerNavLinks.map( ({ categoryDescription, categoryLinks }) => {
                                     return (
-                                        <div className='footer-category'>
+                                        <div key={categoryDescription} className='footer-category'>
                                             <h3 className='footer-category-title'>{categoryDescription}</h3>
 
                                             <ul className='footer-category-links-wrapper'>
@@ -47,6 +49,12 @@ const Footer = () => {
                                     </a>
                                 ))
                             }
+                        </div>
+
+                        <div className='footer-copyright-statement'>
+                            <p className='footer-small-text'>
+                                {siteTitle} has the exclusive rights to these jawnz *insert copyright symbol*
+                            </p>
                         </div>
 
                     </nav>

@@ -11,7 +11,7 @@ import Logo from '../logo';
 
 
 const Header = ({
-
+    siteTitle
 }) => {
 
     // hamburger icon
@@ -57,7 +57,7 @@ const Header = ({
             <header className='header-wrapper'>
 
                     <div className='header-branding-wrapper'>
-                        <Logo logoTitle='pofo' />
+                        <Logo logoTitle={siteTitle} />
                     </div>
 
                     <nav ref={navRef} className='header-nav-menu'>
