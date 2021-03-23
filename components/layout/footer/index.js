@@ -30,7 +30,7 @@ const Footer = ({
                                                 {
                                                     categoryLinks.map( ({ linkTitle, linkDestination }) => (
                                                         <li key={linkTitle} className='footer-list-item site-link'>
-                                                            <Link key={linkTitle} href={linkDestination}>{linkTitle}</Link>
+                                                            <Link href={linkDestination}>{linkTitle}</Link>
                                                         </li>
                                                     ) )
                                                 }

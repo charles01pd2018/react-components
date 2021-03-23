@@ -14,8 +14,6 @@ const Header = ({
     siteTitle
 }) => {
 
-    // hamburger icon
-    const hamburgerRef = useRef(null);
     // navigation menu, including mobile nav
     const navRef = useRef(null);
 
@@ -39,7 +37,6 @@ const Header = ({
     const clickOutside = (e) => {
         if (!navRef.current) return; // prevent page breakdown in event of a bug
         if (navRef.current.contains(e.target)) return; // don't close on header or nav menu click
-        if (e.current === hamburgerRef.current) return; // don't close on hamburger click
         closeMobileHeader();
     }
 
@@ -61,7 +58,7 @@ const Header = ({
                     </div>
 
                     <nav ref={navRef} className='header-nav-menu'>
-                        <button ref={hamburgerRef} onClick={mobileHeaderActive === true ? closeMobileHeader : openMobileHeader} className="header-nav-toggle">
+                        <button onClick={mobileHeaderActive === true ? closeMobileHeader : openMobileHeader} className="header-nav-toggle">
                             <span className="screen-reader">Menu</span>
                                 <span className="hamburger">
                                     <span className="hamburger-inner"></span>

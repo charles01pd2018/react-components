@@ -8,7 +8,7 @@ import DefaultLayout from './layout/defaultLayout';
 import { Hero, WaveHero } from '../components/hero/hero';
 import GridPanel from '../components/grid-panel';
 import FlexPanel from '../components/flex-panel'
-import GridContent from '../components/grid-content';
+import GridSection from '../components/grid-section';
 
 
 const ReactComponents = ({
@@ -22,7 +22,7 @@ const ReactComponents = ({
 
                   <Hero />
                   <WaveHero />
-                  <GridContent />
+                  <GridSection />
                   <GridPanel />
                   <FlexPanel />
         </DefaultLayout>

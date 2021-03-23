@@ -1,0 +1,49 @@
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+$grid-section--image-area:          2fr;   
+$grid-section--description-area:    3fr;    
+
+/*--------------------------------------------------------------
+# Styling
+--------------------------------------------------------------*/
+.grid-section {
+    display: grid;
+    gap: 5rem;
+
+    &.image-align-left {
+        grid-template-columns: $grid-section--image-area $grid-section--description-area;
+
+        .grid-section-image-wrapper {
+            grid-column: 1 / 2;
+        }
+
+        .grid-section-description-wrapper {
+            text-align: left;
+            grid-column: 2 / 2;
+        }
+    }
+
+    &.image-align-right {
+        grid-template-columns: $grid-section--description-area $grid-section--image-area;
+
+        .grid-section-description-wrapper {
+            text-align: right;
+            grid-column: 1 / 2;
+            grid-row: 1 / 1; // to make sure the grid is in the same row *explicit*
+        }
+
+        .grid-section-image-wrapper {
+            grid-column: 2 / 2;
+        }
+    }
+
+    @media (max-width: $breakpoint--medium) {
+        display: flex;
+        flex-direction: column;
+        
+        .grid-section-description-wrapper {
+            text-align: center !important;
+        }
+    }
+}
