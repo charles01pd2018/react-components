@@ -74,8 +74,6 @@ $header-hamburger--color:       var(--main-color);  // color
 		transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.1s 0.25s ease-in;
 	}
 
-
-    // TRANSITION NOT FIRING BECAUSE CLASS NOT ADDES
 	.off-nav-is-active & {
 		transform: rotate(225deg);
 		transition-delay: 0.12s;

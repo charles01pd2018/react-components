@@ -44,7 +44,7 @@
                 display: none;
                 
                 // mobile menu
-                @media (max-width: 800px) {
+                @media (max-width: $breakpoint--medium) {
                     display: block;
 
                     // adjust styling when hamburger becomes closest sibling, aka visbile on the screen

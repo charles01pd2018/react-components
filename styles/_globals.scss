@@ -1,4 +1,8 @@
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
 :root {
+  // colors
   --main-color:             #46F56E;    // green:            rgb(70, 245, 110)
   --secondary-color:        #B4FF5F;    // light green:      rgb(180, 255, 95)
   --middle-color:           #E1FF64;    // yellow-green:     rgb(225, 255, 100)
@@ -70,7 +74,7 @@ a {
 }
 
 // tablet (5% smaller than Desktop)
-@media(max-width: 1025px) {
+@media(max-width: $breakpoint--large) {
   h1 {
     font-size: 2.85em;
   }
@@ -85,7 +89,7 @@ a {
 }
 
 // mobile (10% smaller than Desktop)
-@media(max-width: 800px) {
+@media(max-width: $breakpoint--medium) {
   h1 {
     font-size: 2.7em;
   }

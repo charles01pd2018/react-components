@@ -1,14 +1,31 @@
-// global styles
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+$breakpoint--large:         1025px;     // anything under is a tablet screen   
+$breakpoint--medium:        800px;      // anything under is a mobile screen
+
+/*--------------------------------------------------------------
+# Global
+--------------------------------------------------------------*/
 @import "base", "globals";
 
-// layout
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
 @import "layout/common", "layout/header", "layout/footer";
 
-// shapes
+/*--------------------------------------------------------------
+# Shapes
+--------------------------------------------------------------*/
 @import "shapes/hamburger";
 
-// animations
+/*--------------------------------------------------------------
+# Animations
+--------------------------------------------------------------*/
 @import "animations";
 
-// components
-@import "components/gridPanel", "components/hero", "components/flexPanel";
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/gridPanel", "components/hero", 
+    "components/flexPanel", "components/gridContent";

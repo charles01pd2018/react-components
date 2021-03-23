@@ -11,7 +11,7 @@
     border-radius: 1.5rem;
 
     // mobile - prevent overflow to the right
-    @media (max-width: 800px) {
+    @media (max-width: $breakpoint--medium) {
         grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     }
 

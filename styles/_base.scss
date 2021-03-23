@@ -8,7 +8,7 @@ main.site-content {
   margin-bottom: 1rem;
   
   // tablet - 75% smaller
-  @media (max-width: 1025px) {
+  @media (max-width: $breakpoint--large) {
     padding: 2.1rem 3.5rem;
   }
 
