@@ -1,0 +1,26 @@
+.carousel-wrapper {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+    
+    .carousel-display-wrapper {
+
+    }
+
+    .carousel-description-wrapper {
+        text-align: left;
+
+        .carousel-description-text-wrapper {
+            padding: 1rem;
+            background-color: lightgray;
+            border-radius: 1rem;
+
+            .carousel-description-features-wrapper {
+                padding-top: 1.5rem;
+
+                .carousel-description-features-list {
+                }
+            }
+        }
+    }
+}
