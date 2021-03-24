@@ -5,7 +5,7 @@ import Head from 'next/head';
 import DefaultLayout from './layout/defaultLayout';
 
 // components
-import { Hero, WaveHero } from '../components/hero/hero';
+import { Hero, WaveHero } from '../components/hero';
 import { GridPanel, FlexPanel, GridSection, Carousel } from '../components';
 
 
