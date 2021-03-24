@@ -29,3 +29,8 @@ $breakpoint--medium:        800px;      // anything under is a mobile screen
 --------------------------------------------------------------*/
 @import "components/gridPanel", "components/hero", 
     "components/flexPanel", "components/gridSection";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "components/elements/imageOverlap";

@@ -1,6 +1,9 @@
 // dependencies
 import classNames from 'classnames';
 
+// elements
+import { ImageOverlap } from '../elements';
+
 // content
 import { GridSectionContent } from './content';
 
@@ -9,7 +12,7 @@ const GridSection = ({
     alignImage='left' // 'left' || 'right'
 }) => {
 
-    const { images, description } = GridSectionContent
+    const { images, description } = GridSectionContent;
 
     return (
         <section className='container'>
@@ -17,11 +20,7 @@ const GridSection = ({
             <div className={ classNames( 'grid-section', alignImage === 'left' ? 'image-align-left' : 'image-align-right' ) }>
 
                 <div className='grid-section-image-wrapper'>
-                    {
-                        images.map( ({ imagePath, imageAltText }) => (
-                            <img key={imageAltText} src={imagePath} alt={imageAltText} className='grid-section-image site-image' />
-                        ) )
-                    }
+                    <ImageOverlap images={images} />
                 </div>
 
                 <div className='grid-section-description-wrapper'>
@@ -30,7 +29,6 @@ const GridSection = ({
                 </div>
 
             </div>
-
         </section>
     );
 }

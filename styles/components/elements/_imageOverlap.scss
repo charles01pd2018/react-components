@@ -1,0 +1,28 @@
+.image-overlap-wrapper {
+    display: grid; 
+    grid-template-columns: repeat(12, 1fr);
+
+    border: 5px solid red;
+
+    .overlap-image {
+        justify-self: center;
+
+        // image on top
+        &:first-of-type {
+            grid-column: 1 / span 10;
+            grid-row: 1;
+            padding-top: 20%;
+            z-index: 1;
+
+            border: 5px solid blue;
+        }
+
+        // background image
+        &:last-of-type {
+            grid-column: 4 / -1;
+            grid-row: 1;
+
+            border: 5px solid yellow;
+        }
+    }
+}
