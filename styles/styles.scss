@@ -28,7 +28,8 @@ $breakpoint--medium:        800px;      // anything under is a mobile screen
 # Components
 --------------------------------------------------------------*/
 @import "components/gridPanel", "components/hero", 
-    "components/flexPanel", "components/gridSection";
+    "components/flexPanel", "components/gridSection",
+    "components/carousel";
 
 /*--------------------------------------------------------------
 # Elements
