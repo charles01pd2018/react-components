@@ -1,5 +1,5 @@
-import ImageOverlap from './imageOverlap';
+import ImageOverlay from './imageOverlay';
 
 export {
-    ImageOverlap
+    ImageOverlay
 }

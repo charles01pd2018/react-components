@@ -2,7 +2,7 @@
 import classNames from 'classnames';
 
 // elements
-import { ImageOverlap } from '../elements';
+import { ImageOverlay } from '../elements';
 
 // content
 import { GridSectionContent } from './content';
@@ -20,7 +20,7 @@ const GridSection = ({
             <div className={ classNames( 'grid-section', alignImage === 'left' ? 'image-align-left' : 'image-align-right' ) }>
 
                 <div className='grid-section-image-wrapper'>
-                    <ImageOverlap images={images} />
+                    <ImageOverlay images={images} />
                 </div>
 
                 <div className='grid-section-description-wrapper'>

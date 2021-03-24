@@ -1,5 +1,5 @@
 
-const ImageOverlap = ({
+const ImageOverlay = ({
     images
 }) => {
 
@@ -14,4 +14,4 @@ const ImageOverlap = ({
     );
 }
 
-export default ImageOverlap;
+export default ImageOverlay;
