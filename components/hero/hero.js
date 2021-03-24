@@ -22,6 +22,7 @@ export const WaveHero = ({
     return (
         <section className='hero-wave-background'>
             <div className='container'>
+                <h1>Hero</h1>
                 <div className='hero-wave-wrapper'>
                     <div className='hero-wave-content'>
                         <h1 className='hero-wave-content-title'>{WaveHeroContent.title}</h1>

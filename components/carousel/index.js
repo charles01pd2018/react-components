@@ -5,7 +5,6 @@ import { ImageOverlay } from '../elements';
 import { CarouselContent } from './content';
 
 const Carousel = ({
-    displayAlign // 'left' || 'right'
 }) => {
     
     // main content -> THIS IS AN ARRAY sdafjhskdfjdsklh
@@ -18,23 +17,29 @@ const Carousel = ({
  
     return (
         <section className='container'>
+            <h1>Carousel</h1>
             <div className='carousel-wrapper'>
                 <div className='carousel-display-wrapper'>
                     <a href={carouselDisplayDestination} target='_blank'><ImageOverlay images={displayImages} /></a>
                 </div>
 
                 <div className='carousel-description-wrapper'>
+                    {/* MAKE THIS AN ELEMENT */}
                     <div className='carousel-description-tags-wrapper'>
                         {
                             carouselDescriptionTags.map( tag => (
-                                <p key={tag} className='text-sm'>{tag}</p>
+                                <span className='carousel-description-tag'>
+                                    <p key={tag} className='text-xs'>{tag}</p>
+                                </span>
                             ))
                         }
                     </div>
-
+                    
+                    {/* MAKE THIS AN ELEMENT */}
                     <div className='carousel-description-text-wrapper'>
                         {carouselDescriptionText}
-                        <hr className/>
+                        <hr className='horizontal-line-sm align-left'/>
+
                         <div className='carousel-description-features-wrapper'>
                             {featuresTitle}
                             <ul className='carousel-description-features-list'>
@@ -45,6 +50,10 @@ const Carousel = ({
                                 }
                             </ul>
                         </div>
+                    </div>
+
+                    <div className='carousel-toggle'>
+                        Toggle Button
                     </div>
                 </div>
             </div>
