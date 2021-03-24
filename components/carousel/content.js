@@ -11,17 +11,20 @@ export const CarouselContent = [
                     imageAltText: 'image 2 alt text',
                 },
             ],
-            carouselDisplayDestination: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            carouselDisplayDestination: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' // optional
         },
-        carouselDescription: 'This is a beautiful photo that you have here. This is text that explains that beautiful photo. What a magnficent photo that awesome photo is.',
-        carouselFeatures: {
-            carouselFeatureTitle: 'Why this photo is magnificent',
-            carouselFeatureList: [
+        carouselDescriptionText: 'This is a beautiful photo that you have here. This is text that explains that beautiful photo. What a magnficent photo that awesome photo is.',
+        carouselDescriptionFeatures: { // optional
+            featuresTitle: 'Why this photo is magnificent',
+            featuresList: [
                 'it is awesome',
                 'it is awesome',
                 'it is awesome'
             ]
-        }
+        },
+        carouselDescriptionTags: [ // optional
+            'tag1', 'tag2', 'tag3'
+        ]
     },
     {
         carouselDisplay: {
@@ -35,16 +38,19 @@ export const CarouselContent = [
                     imageAltText: 'image 2 alt text',
                 },
             ],
-            carouselDisplayDestination: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            carouselDisplayDestination: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' // optional
         },
-        carouselDescription: 'This is a beautiful photo that you have here. This is text that explains that beautiful photo. What a magnficent photo that awesome photo is.',
-        carouselFeatures: {
-            carouselFeatureTitle: 'Why this photo is magnificent',
-            carouselFeatureList: [
+        carouselDescriptionText: 'This is a beautiful photo that you have here. This is text that explains that beautiful photo. What a magnficent photo that awesome photo is.',
+        carouselDescriptionFeatures: { // optional
+            featuresTitle: 'Why this photo is magnificent',
+            featuresList: [
                 'it is awesome',
                 'it is awesome',
                 'it is awesome'
             ]
-        }
+        },
+        carouselDescriptionTags: [ // optional
+            'tag1', 'tag2', 'tag3'
+        ]
     },
 ];
