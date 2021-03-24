@@ -36,7 +36,8 @@ main.site-content {
 --------------------------------------------------------------*/
 .horizontal-line-sm {
   max-width: 50%;
-  margin-left: 0.5rem;
-  margin-top: 0.8rem;
-  margin-bottom: 0;
+
+  &.align-left {
+    margin-left: 0;
+  }
 }

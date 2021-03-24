@@ -7,8 +7,8 @@ import { CarouselContent } from './content';
 const Carousel = ({
 }) => {
     
-    // main content -> THIS IS AN ARRAY sdafjhskdfjdsklh
-    const { carouselDisplay, carouselDescriptionText, ...optionalCarouselContent } = CarouselContent[0];
+    // main content
+    const { carouselDisplay, carouselDescriptionTitle, carouselDescriptionText, ...optionalCarouselContent } = CarouselContent[0];
     // display content
     const { displayImages, carouselDisplayDestination } = carouselDisplay;
     // optional descriptions
@@ -43,6 +43,9 @@ const Carousel = ({
                         
                         {/* MAKE THIS AN ELEMENT */}
                         <div className='carousel-description-text-wrapper'>
+                            <div className='carousel-description-title'>
+                                <h4>{carouselDescriptionTitle}</h4>
+                            </div>
                             {carouselDescriptionText}
                             <hr className='horizontal-line-sm align-left'/>
 
