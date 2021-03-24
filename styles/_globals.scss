@@ -64,8 +64,16 @@ h2 {
   font-size: 2.5em;
 }
 
+h3 {
+  font-size: 1.8em;
+}
+
 p {
   font-size: 1.15em;
+}
+
+p.text-sm {
+  font-size: 1.05em;
 }
 
 a {
@@ -82,9 +90,17 @@ a {
   h2 {
     font-size: 2.375em;
   }
+
+  h3 {
+    font-size: 1.71em;
+  }
   
   p {
     font-size: 1.0925em;
+  }
+
+  p.text-sm {
+    font-size: 0.9975em;
   }
 }
 
@@ -97,9 +113,17 @@ a {
   h2 {
     font-size: 2.25em;
   }
+
+  h3 {
+    font-size: 1.62em;
+  }
   
   p {
     font-size: 1.035em;
+  }
+
+  p.text-sm {
+    font-size: 0.945em;
   }
 }
 
