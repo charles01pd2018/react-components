@@ -24,7 +24,7 @@ const Footer = ({
                                 footerNavLinks.map( ({ categoryDescription, categoryLinks }) => {
                                     return (
                                         <div key={categoryDescription} className='footer-category'>
-                                            <h3 className='footer-category-title'>{categoryDescription}</h3>
+                                            <h4 className='footer-category-title'>{categoryDescription}</h4>
 
                                             <ul className='footer-category-links-wrapper'>
                                                 {

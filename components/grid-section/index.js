@@ -19,7 +19,7 @@ const GridSection = ({
                 <div className='grid-section-image-wrapper'>
                     {
                         images.map( ({ imagePath, imageAltText }) => (
-                            <img key={imageAltText} src={imagePath} alt={imageAltText} />
+                            <img key={imageAltText} src={imagePath} alt={imageAltText} className='grid-section-image site-image' />
                         ) )
                     }
                 </div>

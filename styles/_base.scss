@@ -1,3 +1,6 @@
+/*--------------------------------------------------------------
+# Section Spacing
+--------------------------------------------------------------*/
 main.site-content {
   align-items: center;
   text-align: center;
@@ -15,5 +18,16 @@ main.site-content {
   // mobile - 50% smaller
   @media (max-width: 800px) {
     padding: 1.5rem 2.5rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.site-image {
+  @media (max-width: 900px) {
+    /* !!! PIC TOO BIG !!! */
+    max-width: 18rem;
+    max-height: 18rem;
   }
 }
