@@ -14,7 +14,8 @@ const Carousel = ({
     // optional descriptions
     const { carouselDescriptionFeatures, carouselDescriptionTags } = optionalCarouselContent;
     const { featuresTitle, featuresList } = carouselDescriptionFeatures;
- 
+    
+    // !!! LOOP THROUGH THE CONTENT ARRAY !!! //
     return (
         <section className='container'>
             <h1>Carousel</h1>
