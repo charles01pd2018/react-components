@@ -10,7 +10,7 @@
         .carousel-display-wrapper {
 
             @media (min-width: $breakpoint--medium) {
-                min-height: 60vh;
+                min-height: 65vh;
             }
         }
 
@@ -44,7 +44,7 @@
         .carousel-toggle-wrapper {
             display: flex;
             padding: 0.5rem;
-            
+
             .carousel-toggle-left {
                 flex-basis: 50%;
                 
