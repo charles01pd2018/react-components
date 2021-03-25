@@ -1,6 +1,6 @@
 
 .carousel-background {
-    background-color: var(--contrast-color);
+    background-color: var(--nerutal-background);
 
     .carousel-wrapper {
         display: grid;
@@ -9,8 +9,7 @@
 
         .carousel-description-wrapper {
             text-align: left;
-            background-color: var(--main-background);
-            border-radius: 2rem;
+            background-color: var(--neutral-background--compliment);
             padding: 1.5rem;
 
             .carousel-description-features-wrapper {

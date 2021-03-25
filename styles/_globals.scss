@@ -3,18 +3,20 @@
 --------------------------------------------------------------*/
 :root {
   // main color pallette
-  --main-color:             #46F56E;    // green:            rgb(70, 245, 110)
-  --secondary-color:        #B4FF5F;    // light green:      rgb(180, 255, 95)
-  --middle-color:           #E1FF64;    // yellow-green:     rgb(225, 255, 100)
-  --secondary-background:   #F5FF78;    // yellow:           rgb(245, 255, 120)
-  --main-background:        #F5FFA0;    // light-yellow:     rgb(245, 255, 160)
-  --contrast-color:         #8FD7E5;    // sky blue:         rgb(143, 215, 229)
+  --main-color:                         #46F56E;    // green:            rgb(70, 245, 110)
+  --secondary-color:                    #B4FF5F;    // light green:      rgb(180, 255, 95)
+  --middle-color:                       #E1FF64;    // yellow-green:     rgb(225, 255, 100)
+  --secondary-background:               #F5FF78;    // yellow:           rgb(245, 255, 120)
+  --main-background:                    #F5FFA0;    // light-yellow:     rgb(245, 255, 160)
+  --contrast-color:                     #8FD7E5;    // sky blue:         rgb(143, 215, 229)
 
-  // font colors
-  --link-hover-color:       #4B5351;    // dark gray blue:   rgb(194, 203, 214)  
-  --font-contrast-color:    #1F4D45;    // dark torquoise:   rgb(31, 77, 69)
+  // font colors            
+  --link-hover-color:                   #4B5351;    // dark gray blue:   rgb(194, 203, 214)  
+  --font-contrast-color:                #1F4D45;    // dark torquoise:   rgb(31, 77, 69)
 
   // other colors
+  --nerutal-background:                 #F4FAFF;   // silver gray:       rgb(244, 250, 255)
+  --neutral-background--compliment:     #FFFFEA;   // yellow tint:       rgb(255, 255, 234)
 }
 
 /*--------------------------------------------------------------
