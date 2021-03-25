@@ -7,10 +7,30 @@
         gap: 5rem;
         grid-template-columns: 1fr 1fr;
 
+        .carousel-display-wrapper {
+
+            @media (min-width: $breakpoint--medium) {
+                min-height: 60vh;
+            }
+        }
+
         .carousel-description-wrapper {
             text-align: left;
             background-color: var(--neutral-background--compliment);
             padding: 1.5rem;
+
+            @media (min-width: $breakpoint--medium) {
+                position: absolute;
+                left: 40%;
+                right: 3%;
+    
+                margin-top: 2rem;
+                z-index: 1;             
+            }
+            
+            @media (max-width: $breakpoint--large) {
+                left: 35%;
+            }
 
             .carousel-description-features-wrapper {
                 padding-top: 1rem;
@@ -24,7 +44,7 @@
             text-align: right;
         }
 
-        @media(max-width: $breakpoint--medium) {
+        @media (max-width: $breakpoint--medium) {
             display: flex;
             flex-direction: column;
         }
