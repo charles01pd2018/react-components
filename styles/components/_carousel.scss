@@ -8,41 +8,33 @@
         grid-template-columns: 1fr 1fr;
 
         .carousel-description-wrapper {
-            padding: 1rem;
+            text-align: left;
             background-color: var(--main-background);
             border-radius: 2rem;
+            padding: 1.5rem;
 
-            // THIS SHOULD FILL THE DIV WITH THE GAP AND GO TO THE NEXT LINE IF THEIR IS NO MORE SPACE IN THE DIV
-            .carousel-description-tags-wrapper {
-                display: inline-flex;
-                gap: 5rem;
+            .carousel-description-features-wrapper {
+                padding-top: 1rem;
 
-                .carousel-description-tag {
-                    background-color: var(--main-color);
-                    padding: 0 0.8rem;
-                    border-radius: 1rem;
+                .carousel-description-features-list {
                 }
             }
+        }
 
-            .carousel-description-text-wrapper {
-                text-align: left;
-                padding: 1.5rem;
+        // THIS SHOULD FILL THE DIV WITH THE GAP AND GO TO THE NEXT LINE IF THEIR IS NO MORE SPACE IN THE DIV
+        .carousel-description-tags-wrapper {
+            display: inline-flex;
+            gap: 1rem;
 
-                @media(max-width: $breakpoint--large) {
-                    padding: 1.5rem 1rem;
-                }
-
-                @media(max-width: $breakpoint--medium) {
-                    padding: 1.5rem 0.5rem;
-                }
-
-                .carousel-description-features-wrapper {
-                    padding-top: 1.5rem;
-
-                    .carousel-description-features-list {
-                    }
-                }
+            .carousel-description-tag {
+                padding: 0 0.8rem;
+                border-radius: 1rem;
+                background-color: lightgreen;
             }
+        }
+
+        .carousel-toggle {
+            text-align: right;
         }
 
         @media(max-width: $breakpoint--medium) {

@@ -18,9 +18,10 @@ const Carousel = ({
     // !!! LOOP THROUGH THE CONTENT ARRAY !!! //
     return (
         <section className='carousel-background'>
-            <div className='container test'>
+            <div className='container'>
                 <h1>Carousel</h1>
                 <div className='carousel-wrapper'>
+
                     <div className='carousel-display-wrapper'>
                         <a href={carouselDisplayDestination} target='_blank'><ImageOverlay images={displayImages} /></a>
 
@@ -30,27 +31,12 @@ const Carousel = ({
                     </div>
 
                     <div className='carousel-description-wrapper'>
-                        {/* MAKE THIS AN ELEMENT */}
-                        <div className='carousel-description-tags-wrapper'>
-                            {
-                                carouselDescriptionTags.map( tag => (
-                                    <span className='carousel-description-tag'>
-                                        <p key={tag} className='text-xs'>{tag}</p>
-                                    </span>
-                                ))
-                            }
-                        </div>
-                        
-                        {/* MAKE THIS AN ELEMENT */}
-                        <div className='carousel-description-text-wrapper'>
-                            <div className='carousel-description-title'>
-                                <h4>{carouselDescriptionTitle}</h4>
-                            </div>
-                            {carouselDescriptionText}
-                            <hr className='horizontal-line-sm align-left'/>
+                        <span className='carousel-description-title'><h4>{carouselDescriptionTitle}</h4></span>
+                        <span className='carousel-description-text'>{carouselDescriptionText}</span>
+                        <hr className='horizontal-line-sm align-left'/>
 
                             <div className='carousel-description-features-wrapper'>
-                                {featuresTitle}
+                                <i>{featuresTitle}</i>
                                 <ul className='carousel-description-features-list'>
                                     {
                                         featuresList.map( feature => (
@@ -59,11 +45,22 @@ const Carousel = ({
                                     }
                                 </ul>
                             </div>
+
+                        {/* MAKE THIS AN ELEMENT */}
+                        <div className='carousel-description-tags-wrapper'>
+                            {
+                                carouselDescriptionTags.map( tag => (
+                                    <span className='carousel-description-tag text-xs'>
+                                        <p key={tag} className='text-xs'>{tag}</p>
+                                    </span>
+                                ))
+                            }
                         </div>
 
                         <div className='carousel-toggle'>
                             Toggle Button
                         </div>
+
                     </div>
                 </div>
             </div>
