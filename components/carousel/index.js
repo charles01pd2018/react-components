@@ -1,5 +1,5 @@
 // elements
-import { ImageOverlay } from '../elements';
+import { ImageOverlay, Tags } from '../elements';
 
 // content
 import { CarouselContent } from './content';
@@ -46,16 +46,7 @@ const Carousel = ({
                             </ul>
                         </div>
 
-                        {/* MAKE THIS AN ELEMENT */}
-                        <div className='carousel-description-tags-wrapper'>
-                            {
-                                carouselDescriptionTags.map( tag => (
-                                    <span className='carousel-description-tag text-xs'>
-                                        <p key={tag} className='text-xs'>{tag}</p>
-                                    </span>
-                                ))
-                            }
-                        </div>
+                        <Tags tags={carouselDescriptionTags} />
 
                         <div className='carousel-toggle'>
                             Toggle Button

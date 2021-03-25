@@ -24,7 +24,7 @@ export const CarouselContent = [
             ]
         },
         carouselDescriptionTags: [ // optional
-            'NEXT.JS', 'tag2', 'tag3'
+            'tag1', 'tag2', 'tag3'
         ]
     },
     {

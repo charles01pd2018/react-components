@@ -21,18 +21,6 @@
             }
         }
 
-        // THIS SHOULD FILL THE DIV WITH THE GAP AND GO TO THE NEXT LINE IF THEIR IS NO MORE SPACE IN THE DIV
-        .carousel-description-tags-wrapper {
-            display: flex;
-            gap: 1rem;
-
-            .carousel-description-tag {
-                padding: 0 0.8rem;
-                border-radius: 1rem;
-                background-color: lightgreen;
-            }
-        }
-
         .carousel-toggle {
             text-align: right;
         }

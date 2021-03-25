@@ -1,6 +1,6 @@
 
 const ImageOverlay = ({
-    images
+    images // array
 }) => {
 
     return(
