@@ -45,13 +45,19 @@ const Carousel = ({
                                 }
                             </ul>
                         </div>
-                        
+
                         <div className='carousel-tags-wrapper'>
                             <Tags tags={carouselDescriptionTags} />
                         </div>
 
-                        <div className='carousel-toggle'>
-                            Toggle Button
+                        <div className='carousel-toggle-wrapper'>
+                            <span className='carousel-toggle-left'>
+                                <span className='chevron left'></span>
+                            </span>
+
+                            <span className='carousel-toggle-right'>
+                                <span className='chevron right'></span>
+                            </span>
                         </div>
 
                     </div>

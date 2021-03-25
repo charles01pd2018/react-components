@@ -36,12 +36,31 @@
                 padding-top: 1rem;
 
                 .carousel-description-features-list {
+                    list-style-type: square;
                 }
             }
         }
 
-        .carousel-toggle {
-            text-align: right;
+        .carousel-toggle-wrapper {
+            display: flex;
+            padding: 0.5rem;
+            
+            .carousel-toggle-left {
+                flex-basis: 50%;
+                
+                * {
+                    cursor: pointer;
+                }
+            }
+
+            .carousel-toggle-right {
+                flex-basis: 50%;
+                text-align: right;
+                
+                * {
+                    cursor: pointer;
+                }
+            }
         }
 
         @media (max-width: $breakpoint--medium) {
