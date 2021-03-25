@@ -35,16 +35,16 @@ const Carousel = ({
                         <span className='carousel-description-text'>{carouselDescriptionText}</span>
                         <hr className='horizontal-line-sm align-left'/>
 
-                            <div className='carousel-description-features-wrapper'>
-                                <i>{featuresTitle}</i>
-                                <ul className='carousel-description-features-list'>
-                                    {
-                                        featuresList.map( feature => (
-                                            <li key={feature} className='carousel-description-feature'>{feature}</li>
-                                        ))
-                                    }
-                                </ul>
-                            </div>
+                        <div className='carousel-description-features-wrapper'>
+                            <i>{featuresTitle}</i>
+                            <ul className='carousel-description-features-list'>
+                                {
+                                    featuresList.map( feature => (
+                                        <li key={feature} className='carousel-description-feature'>{feature}</li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
 
                         {/* MAKE THIS AN ELEMENT */}
                         <div className='carousel-description-tags-wrapper'>

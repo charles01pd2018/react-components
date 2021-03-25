@@ -6,7 +6,7 @@ import DefaultLayout from './layout/defaultLayout';
 
 // components
 import { Hero, WaveHero } from '../components/hero';
-import { GridPanel, FlexPanel, GridSection, Carousel } from '../components';
+import { GridPanel, FlexPanel, GridSection, Carousel, ImageGallery } from '../components';
 
 
 const ReactComponents = ({
@@ -21,6 +21,7 @@ const ReactComponents = ({
                   <Hero />
                   <Carousel />
                   <WaveHero />
+                  <ImageGallery />
                   <GridSection />
                   <GridPanel />
                   <FlexPanel />

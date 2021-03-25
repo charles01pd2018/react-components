@@ -23,7 +23,7 @@
 
         // THIS SHOULD FILL THE DIV WITH THE GAP AND GO TO THE NEXT LINE IF THEIR IS NO MORE SPACE IN THE DIV
         .carousel-description-tags-wrapper {
-            display: inline-flex;
+            display: flex;
             gap: 1rem;
 
             .carousel-description-tag {
