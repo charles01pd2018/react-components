@@ -28,8 +28,8 @@ const Carousel = ({
     }
  
     /* CLASSNAMES */
-    const carouselLeftIconClasses = classNames( 'chevron left', carouselIndex === 0 ? 'hide' : '' );
-    const carouselRightIconClasses = classNames( 'chevron right', carouselIndex === CarouselContent.length - 1 ? 'hide' : '' );
+    const carouselLeftIconClasses = classNames( 'chevron left carousel-toggle-icon site-link', carouselIndex === 0 ? 'hide' : '' );
+    const carouselRightIconClasses = classNames( 'chevron right carousel-toggle-icon site-link', carouselIndex === CarouselContent.length - 1 ? 'hide' : '' );
 
     /* CONTENT */
     const { carouselDisplay, carouselDescriptionTitle, carouselDescriptionText, ...optionalCarouselContent } = CarouselContent[carouselIndex]; // main content

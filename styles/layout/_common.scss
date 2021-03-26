@@ -5,6 +5,8 @@
 }
 
 .site-link {
+    cursor: pointer;
+    
     &:hover {
         animation: pop-out 0.3s ease forwards;
         color: var(--link-hover-color);

@@ -7,8 +7,6 @@
         gap: 5rem;
         grid-template-columns: 1fr 1fr;
 
-        animation: fade-in 3s ease;
-
         .carousel-display-wrapper {
 
             @media (min-width: $breakpoint--medium) {
@@ -49,19 +47,11 @@
 
             .carousel-toggle-left {
                 flex-basis: 50%;
-                
-                * {
-                    cursor: pointer;
-                }
             }
 
             .carousel-toggle-right {
                 flex-basis: 50%;
                 text-align: right;
-                
-                * {
-                    cursor: pointer;
-                }
             }
         }
 

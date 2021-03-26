@@ -19,8 +19,8 @@ const ReactComponents = ({
                 </Head>
 
                   <Hero />
-                  <Carousel />
                   <WaveHero />
+                  <Carousel />
                   <ImageGallery />
                   <GridSection />
                   <GridPanel />
