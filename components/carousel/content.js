@@ -83,4 +83,20 @@ export const CarouselContent = [
             'tag1', 'tag2', 'tag3'
         ]
     },
+    {
+        carouselDisplay: {
+            displayImages: [
+                {
+                    imagePath: '/favicon.svg',
+                    imageAltText: 'image 1 alt text',
+                }, 
+                {
+                    imagePath: '/favicon.svg',
+                    imageAltText: 'image 2 alt text',
+                },
+            ],
+        },
+        carouselDescriptionTitle: 'Magnificent Project 4',
+        carouselDescriptionText: 'This is a beautiful photo that you have here. This is text that explains that beautiful photo. What a magnficent photo that awesome photo is.',
+    },
 ];

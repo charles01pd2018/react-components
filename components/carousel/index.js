@@ -36,7 +36,6 @@ const Carousel = ({
     const { displayImages, carouselDisplayDestination } = carouselDisplay; // display content
     // don't display if these object are null
     const { carouselDescriptionFeatures, carouselDescriptionTags } = optionalCarouselContent; // optional descriptions
-    const { featuresTitle, featuresList } = carouselDescriptionFeatures; // optional features
     
     return (
         <section className='carousel-background'>
@@ -45,7 +44,10 @@ const Carousel = ({
                 <div className='carousel-wrapper'>
 
                     <div className='carousel-display-wrapper'>
-                        <a href={carouselDisplayDestination} target='_blank'><ImageOverlay images={displayImages} /></a>
+                        {
+                            carouselDisplayDestination ? ( <a href={carouselDisplayDestination} target='_blank'><ImageOverlay images={displayImages} /></a> ) : 
+                            ( <ImageOverlay images={displayImages} /> )
+                        }
 
                         <div className='carousel-state-tracker'>
                             {carouselIndex + 1} of {CarouselContent.length}
@@ -57,20 +59,24 @@ const Carousel = ({
                         <span className='carousel-description-text'>{carouselDescriptionText}</span>
                         <hr className='horizontal-line-sm align-left'/>
 
-                        <div className='carousel-description-features-wrapper'>
-                            <i>{featuresTitle}</i>
-                            <ul className='carousel-description-features-list'>
-                                {
-                                    featuresList.map( feature => (
-                                        <li key={feature} className='carousel-description-feature'>{feature}</li>
-                                    ))
-                                }
-                            </ul>
-                        </div>
+                        {
+                            carouselDescriptionFeatures ? (
+                                <div className='carousel-description-features-wrapper'>
+                                    <i>{carouselDescriptionFeatures.featuresTitle}</i>
+                                    <ul className='carousel-description-features-list'>
+                                        {
+                                            carouselDescriptionFeatures.featuresList.map( feature => (
+                                                <li key={feature} className='carousel-description-feature'>{feature}</li>
+                                            ))
+                                        }
+                                    </ul> 
+                                </div> ) : ( null )
+                        }
 
-                        <div className='carousel-tags-wrapper'>
-                            <Tags tags={carouselDescriptionTags} />
-                        </div>
+
+                        {
+                            carouselDescriptionTags ? ( <div className='carousel-tags-wrapper'><Tags tags={carouselDescriptionTags} /></div> ) : ( null )
+                        }
 
                         <div className='carousel-toggle-wrapper'>
                             <span className='carousel-toggle-left'>
