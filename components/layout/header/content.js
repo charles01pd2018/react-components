@@ -1,37 +1,44 @@
 export const headerNavLinks = [
     {
         mainLink: {
-            mainLinkTitle: 'Link 1',
-            mainLinkDestination: '' 
+            mainLinkTitle: 'Hero',
+            mainLinkDestination: '#hero' 
         },
         subLinks: []
     },
     {
         mainLink: {
-            mainLinkTitle: 'Link 2',
-            mainLinkDestination: '' 
+            mainLinkTitle: 'Carousel',
+            mainLinkDestination: '#carousel' 
         },
         subLinks: []
     },
     {
         mainLink: {
-            mainLinkTitle: 'Link 3',
-            mainLinkDestination: '' 
+            mainLinkTitle: 'Image Gallery',
+            mainLinkDestination: '#image-gallery' 
         },
         subLinks: []
     },
     {
         mainLink: {
-            mainLinkTitle: 'Link 4',
-            mainLinkDestination: '' 
+            mainLinkTitle: 'Grid Section',
+            mainLinkDestination: '#grid-section' 
         },
         subLinks: []
     },
     {
         mainLink: {
-            mainLinkTitle: 'Link 5',
-            mainLinkDestination: '' 
+            mainLinkTitle: 'Grid Panel',
+            mainLinkDestination: '#grid-panel' 
         },
         subLinks: [] 
-    }
+    },
+    {
+        mainLink: {
+            mainLinkTitle: 'Flex Panel',
+            mainLinkDestination: '#flex-panel' 
+        },
+        subLinks: [] 
+    },
 ];

@@ -20,7 +20,7 @@ export const WaveHero = ({
 }) => {
 
     return (
-        <section className='hero-wave-background'>
+        <section id='hero' className='hero-wave-background'>
             <div className='container'>
                 <h1>Hero</h1>
                 <div className='hero-wave-wrapper'>

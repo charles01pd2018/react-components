@@ -19,8 +19,8 @@ const GridSection = ({
     const gridSectionClasses = classNames( 'grid-section', alignImage === 'left' ? 'image-align-left' : 'image-align-right' );
 
     return (
-        <section className='container'>
-            <h1>Grid Content</h1>
+        <section id='grid-section' className='container'>
+            <h1>Grid Section</h1>
             <div className={gridSectionClasses}>
 
                 <div className='grid-section-image-wrapper'>

@@ -9,7 +9,7 @@ const GridPanel = ({
 }) => {
 
     return (
-        <section className='container'>
+        <section id='grid-panel' className='container'>
             <h1>Grid Panel</h1>
                 <div className='grid-panel'>
                     {

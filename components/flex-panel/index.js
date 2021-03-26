@@ -9,7 +9,7 @@ const FlexPanel = ({
 }) => {
 
     return (
-        <section className='container'>
+        <section id='flex-panel' className='container'>
             <h1>Flex Panel</h1>
                 <div className='flex-panel'>
                     {

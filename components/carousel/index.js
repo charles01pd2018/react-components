@@ -38,7 +38,7 @@ const Carousel = ({
     const { carouselDescriptionFeatures, carouselDescriptionTags } = optionalCarouselContent; // optional descriptions
     
     return (
-        <section className='carousel-background'>
+        <section id='carousel' className='carousel-background'>
             <div className='container'>
                 <h1>Carousel</h1>
                 <div className='carousel-wrapper'>

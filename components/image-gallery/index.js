@@ -8,7 +8,7 @@ const ImageGallery = ({
     const { imageGalleryTitle, imageGalleryImages } = ImageGalleryContent;
 
     return (
-        <section className='container'>
+        <section id='image-gallery' className='container'>
             <h1>Image Gallery</h1>
             <h2>{imageGalleryTitle}</h2>
             <div className='image-gallery-wrapper'>
