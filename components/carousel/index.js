@@ -1,5 +1,6 @@
 // dependencies
 import { useState } from 'react';
+import classNames from 'classnames';
 
 // elements
 import { ImageOverlay, Tags } from '../elements';
@@ -10,29 +11,32 @@ import { CarouselContent } from './content';
 const Carousel = ({
 }) => {
 
+    /* HOOKS */
     const [ carouselIndex, setCarouselIndex ] = useState(0);
 
+    /* FUNCTIONS */
     const incrementCarouselIndex = () => {
         setCarouselIndex( state => {
-            if (state >= CarouselContent.length - 1) return state;
             return state + 1;
         });
     }
 
     const decrementCarouselIndex = () => {
         setCarouselIndex( state => {
-           if (state <= 0) return state;
            return state - 1;
         });
     }
+ 
+    /* CLASSNAMES */
+    const carouselLeftIconClasses = classNames( 'chevron left', carouselIndex === 0 ? 'hide' : '' );
+    const carouselRightIconClasses = classNames( 'chevron right', carouselIndex === CarouselContent.length - 1 ? 'hide' : '' );
 
-    // main content
-    const { carouselDisplay, carouselDescriptionTitle, carouselDescriptionText, ...optionalCarouselContent } = CarouselContent[carouselIndex];
-    // display content
-    const { displayImages, carouselDisplayDestination } = carouselDisplay;
-    // optional descriptions --> ha
-    const { carouselDescriptionFeatures, carouselDescriptionTags } = optionalCarouselContent;
-    const { featuresTitle, featuresList } = carouselDescriptionFeatures;
+    /* CONTENT */
+    const { carouselDisplay, carouselDescriptionTitle, carouselDescriptionText, ...optionalCarouselContent } = CarouselContent[carouselIndex]; // main content
+    const { displayImages, carouselDisplayDestination } = carouselDisplay; // display content
+    // don't display if these object are null
+    const { carouselDescriptionFeatures, carouselDescriptionTags } = optionalCarouselContent; // optional descriptions
+    const { featuresTitle, featuresList } = carouselDescriptionFeatures; // optional features
     
     return (
         <section className='carousel-background'>
@@ -70,11 +74,11 @@ const Carousel = ({
 
                         <div className='carousel-toggle-wrapper'>
                             <span className='carousel-toggle-left'>
-                                <span className='chevron left' onClick={decrementCarouselIndex}></span>
+                                <span className={carouselLeftIconClasses} onClick={decrementCarouselIndex}></span>
                             </span>
 
                             <span className='carousel-toggle-right'>
-                                <span className='chevron right' onClick={incrementCarouselIndex}></span>
+                                <span className={carouselRightIconClasses} onClick={incrementCarouselIndex}></span>
                             </span>
                         </div>
 

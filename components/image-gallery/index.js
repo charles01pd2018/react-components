@@ -4,6 +4,7 @@ import { ImageGalleryContent } from './content';
 const ImageGallery = ({
 }) => {
 
+    /* CONTENT */
     const { imageGalleryTitle, imageGalleryImages } = ImageGalleryContent;
 
     return (

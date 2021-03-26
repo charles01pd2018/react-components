@@ -12,10 +12,10 @@ const GridSection = ({
     alignImage='left' // 'left' || 'right'
 }) => {
     
-    // content
+    /* CONTENT */
     const { images, description } = GridSectionContent;
 
-    // classnames
+    /* CLASSNAMES */
     const gridSectionClasses = classNames( 'grid-section', alignImage === 'left' ? 'image-align-left' : 'image-align-right' );
 
     return (
