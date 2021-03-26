@@ -1,3 +1,6 @@
+// dependencies
+import { useState } from 'react';
+
 // elements
 import { ImageOverlay, Tags } from '../elements';
 
@@ -6,16 +9,31 @@ import { CarouselContent } from './content';
 
 const Carousel = ({
 }) => {
-    
+
+    const [ carouselIndex, setCarouselIndex ] = useState(0);
+
+    const incrementCarouselIndex = () => {
+        setCarouselIndex( state => {
+            if (state >= CarouselContent.length - 1) return state;
+            return state + 1;
+        });
+    }
+
+    const decrementCarouselIndex = () => {
+        setCarouselIndex( state => {
+           if (state <= 0) return state;
+           return state - 1;
+        });
+    }
+
     // main content
-    const { carouselDisplay, carouselDescriptionTitle, carouselDescriptionText, ...optionalCarouselContent } = CarouselContent[0];
+    const { carouselDisplay, carouselDescriptionTitle, carouselDescriptionText, ...optionalCarouselContent } = CarouselContent[carouselIndex];
     // display content
     const { displayImages, carouselDisplayDestination } = carouselDisplay;
-    // optional descriptions
+    // optional descriptions --> ha
     const { carouselDescriptionFeatures, carouselDescriptionTags } = optionalCarouselContent;
     const { featuresTitle, featuresList } = carouselDescriptionFeatures;
     
-    // !!! LOOP THROUGH THE CONTENT ARRAY !!! //
     return (
         <section className='carousel-background'>
             <div className='container'>
@@ -26,7 +44,7 @@ const Carousel = ({
                         <a href={carouselDisplayDestination} target='_blank'><ImageOverlay images={displayImages} /></a>
 
                         <div className='carousel-state-tracker'>
-                            1 of 5
+                            {carouselIndex + 1} of {CarouselContent.length}
                         </div>
                     </div>
 
@@ -52,11 +70,11 @@ const Carousel = ({
 
                         <div className='carousel-toggle-wrapper'>
                             <span className='carousel-toggle-left'>
-                                <span className='chevron left'></span>
+                                <span className='chevron left' onClick={decrementCarouselIndex}></span>
                             </span>
 
                             <span className='carousel-toggle-right'>
-                                <span className='chevron right'></span>
+                                <span className='chevron right' onClick={incrementCarouselIndex}></span>
                             </span>
                         </div>
 

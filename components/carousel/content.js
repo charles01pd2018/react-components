@@ -13,7 +13,7 @@ export const CarouselContent = [
             ],
             carouselDisplayDestination: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' // optional
         },
-        carouselDescriptionTitle: 'Magnificent Project',
+        carouselDescriptionTitle: 'Magnificent Project 1',
         carouselDescriptionText: 'This is a beautiful photo that you have here. This is text that explains that beautiful photo. What a magnficent photo that awesome photo is.',
         carouselDescriptionFeatures: { // optional
             featuresTitle: 'Why this photo is magnificent',
@@ -41,7 +41,7 @@ export const CarouselContent = [
             ],
             carouselDisplayDestination: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' // optional
         },
-        carouselDescriptionTitle: 'Magnificent Project',
+        carouselDescriptionTitle: 'Magnificent Project 2',
         carouselDescriptionText: 'This is a beautiful photo that you have here. This is text that explains that beautiful photo. What a magnficent photo that awesome photo is.',
         carouselDescriptionFeatures: { // optional
             featuresTitle: 'Why this photo is magnificent',
