@@ -14,11 +14,11 @@ const Header = ({
     siteTitle
 }) => {
 
-    // navigation menu, including mobile nav
-    const navRef = useRef(null);
-
+    /* HOOKS */
+    const navRef = useRef(null); // navigation menu, including mobile nav
     const [ mobileHeaderActive, setMobileHeaderActive ] = useState(false);
 
+    /* FUNCTIONS */
     const closeMobileHeader = () => {
         document.body.classList.remove('off-nav-is-active');
         setMobileHeaderActive(false);
@@ -33,12 +33,18 @@ const Header = ({
         mobileHeaderActive && e.keyCode === 27 && closeMobileHeader();
     }
 
-    // closes menu when the user clicks off the menu
-    const clickOutside = (e) => {
+    const hamburgerOnClick = () => {
+        mobileHeaderActive === true ? closeMobileHeader() : openMobileHeader();
+    }
+
+    const clickOutside = (e) => { // closes menu when the user clicks off the menu
         if (!navRef.current) return; // prevent page breakdown in event of a bug
         if (navRef.current.contains(e.target)) return; // don't close on header or nav menu click
         closeMobileHeader();
     }
+
+    /* CLASSNAMES */
+    const headerLinksWrapperClasses = classNames( 'header-links-wrapper', mobileHeaderActive === true ? 'header-mobile-active' : '' );
 
     useEffect( () => {
         document.addEventListener('keydown', exitKey);
@@ -58,14 +64,14 @@ const Header = ({
                     </div>
 
                     <nav ref={navRef} className='header-nav-menu'>
-                        <button onClick={mobileHeaderActive === true ? closeMobileHeader : openMobileHeader} className="header-nav-toggle">
+                        <button onClick={hamburgerOnClick} className="header-nav-toggle">
                             <span className="screen-reader">Menu</span>
                                 <span className="hamburger">
                                     <span className="hamburger-inner"></span>
                                 </span>
                         </button>
 
-                        <ul className={classNames('header-links-wrapper', mobileHeaderActive === true ? 'header-mobile-active' : '')}>
+                        <ul className={headerLinksWrapperClasses}>
                             {
                                 headerNavLinks.map( linkObject => {
                                     const { mainLinkTitle, mainLinkDestination } = linkObject.mainLink;

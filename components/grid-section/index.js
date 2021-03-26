@@ -11,13 +11,17 @@ import { GridSectionContent } from './content';
 const GridSection = ({
     alignImage='left' // 'left' || 'right'
 }) => {
-
+    
+    // content
     const { images, description } = GridSectionContent;
+
+    // classnames
+    const gridSectionClasses = classNames( 'grid-section', alignImage === 'left' ? 'image-align-left' : 'image-align-right' );
 
     return (
         <section className='container'>
             <h1>Grid Content</h1>
-            <div className={ classNames( 'grid-section', alignImage === 'left' ? 'image-align-left' : 'image-align-right' ) }>
+            <div className={gridSectionClasses}>
 
                 <div className='grid-section-image-wrapper'>
                     <ImageOverlay images={images} />

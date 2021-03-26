@@ -7,6 +7,8 @@
         gap: 5rem;
         grid-template-columns: 1fr 1fr;
 
+        animation: fade-in 3s ease;
+
         .carousel-display-wrapper {
 
             @media (min-width: $breakpoint--medium) {
