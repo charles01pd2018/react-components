@@ -1,15 +1,22 @@
+// dependencies
+import classNames from 'classnames';
 
 const ImageOverlay = ({
-    images // array
+    images, // array
+    className
 }) => {
 
+    const imageOverlayWrapperClasses = classNames( 'image-overlay-wrapper', className );
+
     return(
-        <div className='image-overlap-wrapper'>
-            {
-                images.map( ({ imagePath, imageAltText }) => (
-                    <img key={imageAltText} src={imagePath} alt={imageAltText} role='presentation' className='overlap-image site-image' />
-                ) )
-            }
+        <div className='image-overlay-container'>
+            <div className={imageOverlayWrapperClasses}>
+                {
+                    images.map( ({ imagePath, imageAltText }) => (
+                        <img key={imageAltText} src={imagePath} alt={imageAltText} role='presentation' className='overlay-image site-image' />
+                    ) )
+                }
+            </div>
         </div>    
     );
 }

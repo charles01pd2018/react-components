@@ -45,7 +45,7 @@ const Carousel = ({
 
                     <div className='carousel-display-wrapper'>
                         {
-                            carouselDisplayDestination ? ( <a href={carouselDisplayDestination} target='_blank'><ImageOverlay images={displayImages} /></a> ) : 
+                            carouselDisplayDestination ? ( <a href={carouselDisplayDestination} target='_blank'><ImageOverlay className='zoom-image' images={displayImages} /></a> ) : 
                             ( <ImageOverlay images={displayImages} /> )
                         }
 

@@ -6,3 +6,7 @@
         opacity: 1;
     }
 }
+
+@keyframes zoom-in {
+    to { transform: scale(1.1); }
+}
