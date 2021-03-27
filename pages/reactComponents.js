@@ -2,7 +2,7 @@
 import Head from 'next/head';
 
 // layout
-import DefaultLayout from './layout/defaultLayout';
+import { DefaultLayout } from '../layout';
 
 // components
 import { Hero, WaveHero } from '../components/hero';

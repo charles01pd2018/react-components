@@ -1,6 +1,5 @@
 // components
-import Header from '../../components/layout/header';
-import Footer from '../../components/layout/footer';
+import { Header, Footer } from '../components/layout'
 
 // content
 const siteTitle = 'pofo';
