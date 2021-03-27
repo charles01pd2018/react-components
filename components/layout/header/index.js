@@ -76,7 +76,7 @@ const Header = ({
                                     const { mainLinkTitle, mainLinkDestination } = linkObject.mainLink;
                                     return (
                                         <li key={mainLinkTitle} onClick={closeMobileHeader} className='header-list-item site-link'>
-                                            <Link href={mainLinkDestination}>{mainLinkTitle}</Link>
+                                            <Link href={mainLinkDestination}><a>{mainLinkTitle}</a></Link>
                                         </li>
                                     );
                                 })
