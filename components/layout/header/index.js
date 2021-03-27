@@ -20,12 +20,10 @@ const Header = ({
 
     /* FUNCTIONS */
     const closeMobileHeader = () => {
-        document.body.classList.remove('off-nav-is-active');
         setMobileHeaderActive(false);
     }
 
     const openMobileHeader = () => {
-        document.body.classList.add('off-nav-is-active');
         setMobileHeaderActive(true);
     }
 
@@ -45,6 +43,7 @@ const Header = ({
 
     /* CLASSNAMES */
     const headerLinksWrapperClasses = classNames( 'header-links-wrapper', mobileHeaderActive === true ? 'header-mobile-active' : '' );
+    const hamburgerInnerClasses = classNames( 'hamburger-inner', mobileHeaderActive === true ? 'off-nav-is-active': '' )
 
     useEffect( () => {
         document.addEventListener('keydown', exitKey);
@@ -66,7 +65,7 @@ const Header = ({
                     <nav ref={navRef} className='header-nav-menu'>
                         <button onClick={hamburgerOnClick} className="header-nav-toggle">
                                 <span aria-label='menu-icon' className="hamburger">
-                                    <span className="hamburger-inner"></span>
+                                    <span className={hamburgerInnerClasses}></span>
                                 </span>
                         </button>
 
