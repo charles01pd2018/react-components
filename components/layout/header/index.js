@@ -65,8 +65,7 @@ const Header = ({
 
                     <nav ref={navRef} className='header-nav-menu'>
                         <button onClick={hamburgerOnClick} className="header-nav-toggle">
-                            <span className="screen-reader">Menu</span>
-                                <span className="hamburger">
+                                <span aria-label='menu-icon' className="hamburger">
                                     <span className="hamburger-inner"></span>
                                 </span>
                         </button>

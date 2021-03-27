@@ -10,18 +10,6 @@ $header-hamburger--color:       var(--main-color);  // color
 /*--------------------------------------------------------------
 # Styling
 --------------------------------------------------------------*/
-// Hide elements, for screen readers only
-.screen-reader {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	overflow: hidden;
-	clip: rect(0,0,0,0);
-	white-space: nowrap;
-	border: 0;
-}
-
 .header-nav-toggle {
 	background: transparent;
 	border: 0;
