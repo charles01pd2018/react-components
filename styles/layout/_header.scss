@@ -14,7 +14,6 @@
         
         * {
             margin: 0;
-            padding: 0.3rem;
         }
 
         .header-branding-wrapper {
@@ -23,6 +22,7 @@
 
             .header-branding-title {
                 font-size: 2rem;
+                padding: 0.6rem;
             }
         }
 
@@ -31,6 +31,7 @@
             display: inline-flex;
             justify-content: flex-end;
             white-space: nowrap; // for really long link titles
+            padding: 0.6rem;
 
             .header-links-wrapper {
                 display: inline-flex;
