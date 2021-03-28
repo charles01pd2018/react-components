@@ -61,17 +61,15 @@
                         padding: 1rem;
                         border: 3px solid var(--contrast-color);
 
-                        transition: visibility 0.25s;
+                        transition: transform 0.25s linear;
 
                         &.header-mobile-not-active {
-                            visibility: hidden;
-                            animation: pull-up 0.25s linear forwards;
+                            transform: scaleY(0);
                             transform-origin: top center;
                         }
 
                         &.header-mobile-active {
-                            visibility: visible;
-                            animation: drop-down 0.25s linear;
+                            transform: scaleY(1);
                             transform-origin: top center;
                         }
                     }
@@ -79,13 +77,4 @@
             }
         }
     }
-}
-
-@keyframes drop-down {
-    from { transform: scaleY(0); }
-    to { transform: scaleY(1); }
-}
-
-@keyframes pull-up {
-    to { transform: scaleY(0); }
 }
