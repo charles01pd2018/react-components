@@ -38,41 +38,39 @@
                 gap: 2rem;
                 padding-top: 0.9rem;
                 list-style-type: none;
-            }
-            
-            // do not display mobile menu or hamburger icon on desktop
-            .header-nav-toggle {
-                display: none;
-                
+
                 // mobile menu
                 @media (max-width: $breakpoint--medium) {
-                    display: block;
+                    flex-direction: column;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 100%;
+                    background: white;
+                    align-items: center;
+                    overflow: hidden;
+                    padding: 1rem;
+                    border: 3px solid var(--contrast-color);
 
-                    // adjust styling when hamburger becomes closest sibling, aka visbile on the screen
-                    +.header-links-wrapper {
-                        flex-direction: column;
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        top: 100%;
-                        background: white;
-                        align-items: center;
-                        overflow: hidden;
-                        padding: 1rem;
-                        border: 3px solid var(--contrast-color);
+                    transition: transform 0.25s linear;
 
-                        transition: transform 0.25s linear;
-
-                        &.header-mobile-not-active {
-                            transform: scaleY(0);
-                            transform-origin: top center;
-                        }
-
-                        &.header-mobile-active {
-                            transform: scaleY(1);
-                            transform-origin: top center;
-                        }
+                    &.header-mobile-not-active {
+                        transform: scaleY(0);
+                        transform-origin: top center;
                     }
+
+                    &.header-mobile-active {
+                        transform: scaleY(1);
+                        transform-origin: top center;
+                    }
+                }
+            }
+            
+            .header-nav-toggle {
+                display: none; // do not display hamburger icon on desktop
+                
+                @media (max-width: $breakpoint--medium) {
+                    display: block; // display hamburger icon on mobile + tablet
                 }
             }
         }
