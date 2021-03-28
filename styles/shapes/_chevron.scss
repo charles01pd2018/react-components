@@ -1,29 +1,39 @@
-.chevron::before {
-	border-style: solid;
-	content: '';
-    left: 0.15em;
-	position: relative;
-	top: 0.15em;
-	transform: rotate(-45deg);
-	vertical-align: top;
-	display: inline-block;
-    
-	height: 1em;
-    width: 1em;
-    border-width: 0.3em 0.3em 0 0;
-}
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+$chevron--size: 				1rem;		        // width and height
+$chevron--thickness: 			0.3rem;		    	// stroke width
 
-.chevron.right:before {
-	left: 0;
-	transform: rotate(45deg);
-}
+/*--------------------------------------------------------------
+# Styling
+--------------------------------------------------------------*/
+.chevron {
+	&::before {
+		border-style: solid;
+		content: '';
+		left: 0.15em;
+		position: relative;
+		top: 0.15em;
+		transform: rotate(-45deg);
+		vertical-align: top;
+		display: inline-block;
+		
+		height: $chevron--size;
+		width: $chevron--size;
+		border-width: $chevron--thickness $chevron--thickness 0 0;
+	}
 
-.chevron.bottom:before {
-	top: 0;
-	transform: rotate(135deg);
-}
+	&.right {
+		&::before {
+			left: 0;
+			transform: rotate(45deg);
+		}
+	}
 
-.chevron.left:before {
-	left: 0.25em;
-	transform: rotate(-135deg);
+	&.left {
+		&::before {
+			left: 0.25em;
+			transform: rotate(-135deg);
+		}
+	}
 }
