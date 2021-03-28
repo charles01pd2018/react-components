@@ -61,10 +61,16 @@
                         padding: 1rem;
                         border: 3px solid var(--contrast-color);
 
-                        display: none; // don't show when mobile menu not active
+                        transition: all 0.25s ease;
+
+                        &.header-mobile-not-active {
+                            visibility: hidden;
+                            animation: pull-up 0.25s linear forwards;
+                            transform-origin: top center;
+                        }
 
                         &.header-mobile-active {
-                            display: flex;
+                            visibility: visible;
                             animation: drop-down 0.25s linear;
                             transform-origin: top center;
                         }
@@ -78,4 +84,8 @@
 @keyframes drop-down {
     from { transform: scaleY(0); }
     to { transform: scaleY(1); }
+}
+
+@keyframes pull-up {
+    to { transform: scaleY(0); }
 }

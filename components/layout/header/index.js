@@ -42,7 +42,7 @@ const Header = ({
     }
 
     /* CLASSNAMES */
-    const headerLinksWrapperClasses = classNames( 'header-links-wrapper', mobileHeaderActive === true ? 'header-mobile-active' : '' );
+    const headerLinksWrapperClasses = classNames( 'header-links-wrapper', mobileHeaderActive === true ? 'header-mobile-active' : 'header-mobile-not-active' );
     const hamburgerInnerClasses = classNames( 'hamburger-inner', mobileHeaderActive === true ? 'off-nav-is-active': '' )
 
     useEffect( () => {
