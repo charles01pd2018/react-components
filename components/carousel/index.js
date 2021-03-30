@@ -49,11 +49,11 @@ const Carousel = ({
                         const { carouselDescriptionFeatures, carouselDescriptionTags } = optionalCarouselContent; // optional descriptions
 
                         /* CLASSNAMES */
-                        const cssTransitionClasses = classNames( 'carousel-wrapper', `carousel-${carouselDirection}`, index === carouselIndex ? 'carousel-active' : 'hide' );
+                        const cssTransitionClasses = classNames( 'slide', );
 
                         return (
-                            <CSSTransition key={`carousel-object-${index}`} className={cssTransitionClasses} timeout={0}>
-                                <div>
+                            <CSSTransition key={`carousel-object-${index}`} className={cssTransitionClasses} timeout={{ enter: 1000, exit: 1000 }}>
+                                <div key={index} className={classNames('carousel-wrapper', index === carouselIndex ? 'carousel-active' : 'hide' )}>
                                     <div className='carousel-display-wrapper'>
                                         {
                                             carouselDisplayDestination ? ( <a href={carouselDisplayDestination} target='_blank'><ImageOverlay className='zoom-image' images={displayImages} /></a> ) : 
