@@ -65,6 +65,25 @@
     }
 }
 
+/* react-transition-group */
+.carousel-right-enter {
+    transform: translateX(100%);
+}
+
+.carousel-right-enter-active {
+    transform: translateX(0%);
+    transition: transform 3s;
+}
+
+.carousel-right-exit {
+    transform: translateX(0%);
+}
+
+.carousel-right-exit-active {
+    transform: translateX(-100%);
+    transition: transform 1000ms ease-in-out;
+}
+
 @keyframes fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
