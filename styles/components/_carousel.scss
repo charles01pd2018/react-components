@@ -61,17 +61,25 @@
 
 /* animations */
 .carousel-right-enter {
-    animation: right-slide-in 1s ease;
+    animation: right-carousel-slide-in 1s ease;
+
+    @media(max-width: $breakpoint--medium) {
+        animation: light-fade-in 0.7s ease;
+    }
 }
 
 .carousel-left-enter {
-    animation: left-slide-in 1s ease;
+    animation: left-carousel-slide-in 1s ease;
+
+    @media(max-width: $breakpoint--medium) {
+        animation: light-fade-in 0.7s ease;
+    }
 }
 
-@keyframes right-slide-in {
+@keyframes right-carousel-slide-in {
     from { opacity: 0.6; margin-left: 30%; }
 }
 
-@keyframes left-slide-in {
+@keyframes left-carousel-slide-in {
     from { opacity: 0.6; margin-right: 30%; }
 }
