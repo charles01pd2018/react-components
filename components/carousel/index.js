@@ -1,6 +1,5 @@
 // dependencies
 import { useState } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import classNames from 'classnames';
 
 // elements
@@ -14,21 +13,26 @@ const Carousel = ({
 
     /* HOOKS */
     const [ carouselIndex, setCarouselIndex ] = useState(0); // display the first carousel item
-    const [ carouselDirection, setCarouselDirection ] = useState(''); // set the direction the carousel is going (for CSSTransitionGroup)
+    const [ carouselDirection, setCarouselDirection ] = useState(''); // set the direction the carousel is going (for animations)
 
     /* FUNCTIONS */
     const incrementCarouselIndex = () => {
         setCarouselIndex( state => {
-            setCarouselDirection('right');
+            setCarouselDirection('carousel-right-enter');
             return state + 1;
         });
     }
 
     const decrementCarouselIndex = () => {
         setCarouselIndex( state => {
-            setCarouselDirection('left');
+            setCarouselDirection('carousel-left-enter');
            return state - 1;
         });
+    }
+
+    const handleCarouselWrapperClasses = ( objectIndex, currentIndex ) => {
+        if ( objectIndex === currentIndex ) return carouselDirection;
+        return 'hide';
     }
     
     /* CLASSNAMES */
@@ -40,7 +44,6 @@ const Carousel = ({
             <div className='container'>
                 <h1>Carousel</h1>
 
-                <TransitionGroup component={null}>
                     { CarouselContent.map( ( carouselObject, index ) => {
                         /* CONTENT */
                         const { carouselDisplay, carouselDescriptionTitle, carouselDescriptionText, ...optionalCarouselContent } = carouselObject; // main content
@@ -49,16 +52,17 @@ const Carousel = ({
                         const { carouselDescriptionFeatures, carouselDescriptionTags } = optionalCarouselContent; // optional descriptions
 
                         /* CLASSNAMES */
-                        const cssTransitionClasses = classNames( 'slide', );
+                        const carouselWrapperClasses = classNames( 'carousel-wrapper', handleCarouselWrapperClasses(index, carouselIndex) );
 
                         return (
-                            <CSSTransition key={`carousel-object-${index}`} className={cssTransitionClasses} timeout={{ enter: 1000, exit: 1000 }}>
-                                <div key={index} className={classNames('carousel-wrapper', index === carouselIndex ? 'carousel-active' : 'hide' )}>
+                                <div key={`carousel-object-${index}`} className={carouselWrapperClasses}>
                                     <div className='carousel-display-wrapper'>
-                                        {
-                                            carouselDisplayDestination ? ( <a href={carouselDisplayDestination} target='_blank'><ImageOverlay className='zoom-image' images={displayImages} /></a> ) : 
-                                            ( <ImageOverlay images={displayImages} /> )
-                                        }
+                                        <div className='carousel-image-wrapper'>
+                                            {
+                                                carouselDisplayDestination ? ( <a href={carouselDisplayDestination} target='_blank'><ImageOverlay className='zoom-image' images={displayImages} /></a> ) : 
+                                                ( <ImageOverlay images={displayImages} /> )
+                                            }
+                                        </div>
 
                                         <div className='carousel-state-tracker'>
                                             {carouselIndex + 1} of {CarouselContent.length}
@@ -100,11 +104,9 @@ const Carousel = ({
                                         </div>
                                     </div>
                                 </div>
-                            </CSSTransition>
                                 );
                         } )
                     }
-                </TransitionGroup>
             </div>
         </section>
     );
