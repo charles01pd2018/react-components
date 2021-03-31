@@ -9,7 +9,7 @@ const Logo = ({
 
     return (
         <>
-            <Link href='#'>
+            <Link href='#top'>
                 <a><img src='/favicon.svg' alt='site-logo' className='site-logo' /></a>
             </Link>
             {displayLogoTitle}

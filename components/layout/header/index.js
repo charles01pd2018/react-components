@@ -55,7 +55,7 @@ const Header = ({
     })
 
     return (
-        <section className='header-container'>
+        <section id='top' className='header-container'>
             <header className='header-wrapper'>
 
                     <div className='header-branding-wrapper'>
