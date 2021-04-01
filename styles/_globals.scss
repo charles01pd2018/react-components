@@ -62,32 +62,20 @@ body {
   scroll-behavior: smooth;
 }
 
-h1 {
-  font-size: 3em;
-}
+$font-sizing-map: (
+  "h1": 3em,
+  "h2": 2.5em,
+  "h3": 1.8em,
+  "h4": 1.2em,
+  "p": 1.15em,
+  "p.text-sm": 1.05em,
+  "p.text-xs": 0.9em
+);
 
-h2 {
-  font-size: 2.5em;
-}
-
-h3 {
-  font-size: 1.8em;
-}
-
-h4 {
-  font-size: 1.2em;
-}
-
-p {
-  font-size: 1.15em;
-}
-
-p.text-sm {
-  font-size: 1.05em;
-}
-
-p.text-xs {
-  font-size: 0.9em;
+@each $font-type, $font-size in $font-sizing-map {
+  #{$font-type} {
+    font-size: $font-size;
+  }
 }
 
 a {
@@ -105,63 +93,21 @@ hr {
 
 // tablet (5% smaller than Desktop)
 @media(max-width: $breakpoint--large) {
-  h1 {
-    font-size: 2.85em;
-  }
-  
-  h2 {
-    font-size: 2.375em;
-  }
 
-  h3 {
-    font-size: 1.71em;
-  }
-
-  h4 {
-    font-size: 1.14em;
-  }
-  
-  p {
-    font-size: 1.0925em;
-  }
-
-  p.text-sm {
-    font-size: 0.9975em;
-  }
-
-  p.text-xs {
-    font-size: 0.855em;
+  @each $font-type, $font-size in $font-sizing-map {
+    #{$font-type} {
+      font-size: $font-size * 0.95;
+    }
   }
 }
 
 // mobile (10% smaller than Desktop)
 @media(max-width: $breakpoint--medium) {
-  h1 {
-    font-size: 2.7em;
-  }
-  
-  h2 {
-    font-size: 2.25em;
-  }
 
-  h3 {
-    font-size: 1.62em;
-  }
-
-  h4 {
-    font-size: 1.08em;
-  }
-  
-  p {
-    font-size: 1.035em;
-  }
-
-  p.text-sm {
-    font-size: 0.945em;
-  }
-
-  p.text-xs {
-    font-size: 0.81em;
+  @each $font-type, $font-size in $font-sizing-map {
+    #{$font-type} {
+      font-size: $font-size * 0.9;
+    }
   }
 }
 
