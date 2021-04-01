@@ -44,6 +44,7 @@ $grid-section--description-area:    3fr;
         
         .grid-section-description-wrapper {
             text-align: center !important;
+            order: -1;
         }
     }
 }
