@@ -9,7 +9,7 @@ const ImageOverlay = ({
     const imageOverlayWrapperClasses = classNames( 'image-overlay-wrapper', className );
 
     return(
-        <div className='image-overlay-container'>
+        <div className='image-container'>
             <div className={imageOverlayWrapperClasses}>
                 {
                     images.map( ({ imagePath, imageAltText }) => (
