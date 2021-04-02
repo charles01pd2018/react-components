@@ -3,7 +3,7 @@ import { useState } from 'react';
 import classNames from 'classnames';
 
 // elements
-import { ImageOverlay, Tags } from '../elements';
+import { ImageBackground, Tags } from '../elements';
 
 // content
 import { CarouselContent } from './content';
@@ -59,8 +59,11 @@ const Carousel = ({
                                     <div className='carousel-display-wrapper'>
                                         <div className='carousel-image-wrapper'>
                                             {
-                                                carouselDisplayDestination ? ( <a href={carouselDisplayDestination} target='_blank'><ImageOverlay className='zoom-image' images={displayImages} /></a> ) : 
-                                                ( <ImageOverlay images={displayImages} /> )
+                                                carouselDisplayDestination ? ( 
+                                                <a href={carouselDisplayDestination} target='_blank'>
+                                                    <ImageBackground className='zoom-image' imageBackgroundURL={displayImages[0].imagePath} imageOnTop={displayImages[1]}  />
+                                                </a> ) : ( 
+                                                <ImageBackground imageBackgroundURL={displayImages[0].imagePath} imageOnTop={displayImages[1]} /> )
                                             }
                                         </div>
 
@@ -104,7 +107,7 @@ const Carousel = ({
                                         </div>
                                     </div>
                                 </div>
-                                );
+                            );
                         } )
                     }
             </div>

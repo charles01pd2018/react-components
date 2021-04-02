@@ -13,7 +13,7 @@ const ImageOverlay = ({
             <div className={imageOverlayWrapperClasses}>
                 {
                     images.map( ({ imagePath, imageAltText }) => (
-                        <img key={imageAltText} src={imagePath} alt={imageAltText} role='presentation' className='overlay-image site-image' />
+                        <img key={imageAltText} className='overlay-image site-image' src={imagePath} alt={imageAltText} role='presentation' />
                     ) )
                 }
             </div>

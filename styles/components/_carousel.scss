@@ -39,6 +39,11 @@
             }
         }
 
+        .carousel-tags-wrapper {
+            display: flex;
+            justify-content: flex-end;
+        }
+
         .carousel-toggle-wrapper {
             display: flex;
             padding: 1rem 0.5rem;
