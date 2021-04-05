@@ -98,11 +98,13 @@ const Carousel = ({
 
                                         <div className='carousel-toggle-wrapper'>
                                             <span className='carousel-toggle-left'>
-                                                <span className={carouselLeftIconClasses} onClick={decrementCarouselIndex}></span>
+                                                <span className='screen-reader'>carousel toggle chevron left icon</span>
+                                                <span className={carouselLeftIconClasses} aria-label='carousel toggle chevron left icon'  onClick={decrementCarouselIndex}></span>
                                             </span>
 
                                             <span className='carousel-toggle-right'>
-                                                <span className={carouselRightIconClasses} onClick={incrementCarouselIndex}></span>
+                                                <span className='screen-reader'>carousel toggle chevron right icon</span>
+                                                <span className={carouselRightIconClasses} aria-label='carousel toggle chevron right icon' onClick={incrementCarouselIndex}></span>
                                             </span>
                                         </div>
                                     </div>

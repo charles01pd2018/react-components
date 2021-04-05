@@ -22,7 +22,6 @@ const GridSection = ({
         <section id='grid-section' className='container'>
             <h1>Grid Section</h1>
             <div className={gridSectionClasses}>
-
                 <div className='grid-section-image-wrapper'>
                     <ImageOverlay images={images} />
                 </div>
@@ -31,7 +30,6 @@ const GridSection = ({
                     <h3>{description.descriptionTitle}</h3>
                     <p className='text-sm'>{description.descriptionText}</p>
                 </div>
-
             </div>
         </section>
     );
