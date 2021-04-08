@@ -1,11 +1,14 @@
 // pages
 import ReactComponents from './reactComponents';
 
-const Home = ({
+// layout
+import { DefaultLayout } from '../layout';
+
+export default ({
 }) => {
   return (
-    <ReactComponents />
+    <DefaultLayout>
+      <ReactComponents />
+    </DefaultLayout>
   );
 }
-
-export default Home;

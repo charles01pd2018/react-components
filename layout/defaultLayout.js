@@ -2,17 +2,19 @@
 import { Header, Footer } from '../components/layout'
 
 // content
-const siteTitle = 'pofo';
+import { HeaderContent, FooterContent } from './layoutContent';
 
 const DefaultLayout = ({
     children
 }) => {
 
+    var SITE_NAME = 'pofo';
+
     return (
         <>
-            <Header siteTitle={siteTitle}/>
+            <Header siteTitle={SITE_NAME} content={HeaderContent} />
                 <main className='site-content'>{children}</main>
-            <Footer siteTitle={siteTitle} />
+            <Footer siteTitle={SITE_NAME} content={FooterContent} />
         </>
     );
 }

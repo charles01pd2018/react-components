@@ -1,32 +1,31 @@
-// content
-import { HeroContent, WaveHeroContent } from './content';
-
 export const Hero = ({
-
+    id,
+    content: { heroTitle, heroDescription }
 }) => {
 
     return (
-        <section className='container'>
+        <section id={id} className='container'>
             <div className='hero-wrapper'>
-                <h1>{HeroContent.title}</h1>
-                <p>{HeroContent.description}</p>
+                <h1>{heroTitle}</h1>
+                <p>{heroDescription}</p>
             </div>
         </section>
     );
 }
 
 export const WaveHero = ({
-
+    id,
+    content: { waveHeroTitle, waveHeroDescription }
 }) => {
 
     return (
-        <section id='hero' className='hero-wave-background'>
+        <section id={id} className='hero-wave-background'>
             <div className='container'>
                 <h1>Hero</h1>
                 <div className='hero-wave-wrapper'>
                     <div className='hero-wave-content'>
-                        <h1 className='hero-wave-content-title'>{WaveHeroContent.title}</h1>
-                        <p className='hero-wave-content-description'>{WaveHeroContent.description}</p>
+                        <h1 className='hero-wave-content-title'>{waveHeroTitle}</h1>
+                        <p className='hero-wave-content-description'>{waveHeroDescription}</p>
                     </div>
 
                     <div className='hero-wave-visual-wrapper'>

@@ -5,10 +5,10 @@ import classNames from 'classnames';
 // elements
 import { ImageBackground, Tags } from '../elements';
 
-// content
-import { CarouselContent } from './content';
 
 const Carousel = ({
+    id,
+    content: { carouselTitle, carouselItems }
 }) => {
 
     /* HOOKS */
@@ -37,14 +37,14 @@ const Carousel = ({
     
     /* CLASSNAMES */
     const carouselLeftIconClasses = classNames( 'chevron left carousel-toggle-icon site-link', carouselIndex === 0 ? 'hide' : '' );
-    const carouselRightIconClasses = classNames( 'chevron right carousel-toggle-icon site-link', carouselIndex === CarouselContent.length - 1 ? 'hide' : '' );
+    const carouselRightIconClasses = classNames( 'chevron right carousel-toggle-icon site-link', carouselIndex === carouselItems.length - 1 ? 'hide' : '' );
     
     return (
-        <section id='carousel' className='carousel-background'>
+        <section id={id} className='carousel-background'>
             <div className='container'>
-                <h1>Carousel</h1>
+                <h1>{carouselTitle}</h1>
 
-                    { CarouselContent.map( ( carouselObject, index ) => {
+                    { carouselItems.map( ( carouselObject, index ) => {
                         /* CONTENT */
                         const { carouselDisplay, carouselDescriptionTitle, carouselDescriptionText, ...optionalCarouselContent } = carouselObject; // main content
                         const { displayImages, carouselDisplayDestination } = carouselDisplay; // display content
@@ -68,7 +68,7 @@ const Carousel = ({
                                         </div>
 
                                         <div className='carousel-state-tracker'>
-                                            {carouselIndex + 1} of {CarouselContent.length}
+                                            {carouselIndex + 1} of {carouselItems.length}
                                         </div>
                                     </div>
 

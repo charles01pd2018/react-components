@@ -1,14 +1,10 @@
-// content
-import { ImageGalleryContent } from './content';
-
 const ImageGallery = ({
+    id,
+    content: { imageGalleryTitle, imageGalleryDescription, imageGalleryImages }
 }) => {
 
-    /* CONTENT */
-    const { imageGalleryTitle, imageGalleryImages } = ImageGalleryContent;
-
     return (
-        <section id='image-gallery' className='container'>
+        <section id={id} className='container'>
             <h1>Image Gallery</h1>
             <h2>{imageGalleryTitle}</h2>
             <div className='image-gallery-wrapper'>

@@ -1,19 +1,17 @@
-// content
-import { FlexPanelContent } from './content';
-
 // partials
 import Card from './card';
 
 const FlexPanel = ({
-
+    id,
+    content: { flexPanelTitle, flexPanelCards }
 }) => {
 
     return (
-        <section id='flex-panel' className='container'>
-            <h1>Flex Panel</h1>
+        <section id={id} className='container'>
+            <h1>{flexPanelTitle}</h1>
                 <div className='flex-panel'>
                     {
-                        FlexPanelContent.map( ({ cardHeader, cardDescription }) => (
+                        flexPanelCards.map( ({ cardHeader, cardDescription }) => (
                             <Card cardHeader={cardHeader} cardDescription={cardDescription} key={cardHeader} />
                         ))
                     }

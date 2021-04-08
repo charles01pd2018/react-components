@@ -1,19 +1,18 @@
 // partials
 import Card from './card';
 
-// component data
-import { GridPanelContent } from './content';
-
 
 const GridPanel = ({
+    id,
+    content: { gridPanelTitle, gridPanelCards }
 }) => {
 
     return (
-        <section id='grid-panel' className='container'>
-            <h1>Grid Panel</h1>
+        <section id={id} className='container'>
+            <h1>{gridPanelTitle}</h1>
                 <div className='grid-panel'>
                     {
-                       GridPanelContent.map( ({ cardHeader, cardDescription }) => (
+                       gridPanelCards.map( ({ cardHeader, cardDescription }) => (
                            <Card cardHeader={cardHeader} cardDescription={cardDescription} key={cardHeader} />
                        ))
                     }

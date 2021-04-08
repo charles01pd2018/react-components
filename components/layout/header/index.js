@@ -3,15 +3,13 @@ import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
 import classNames from 'classNames';
 
-// content
-import { headerNavLinks } from './content';
-
 // partials
 import Logo from '../logo';
 
 
 const Header = ({
-    siteTitle
+    siteTitle,
+    content: { headerNavLinks }
 }) => {
 
     /* HOOKS */

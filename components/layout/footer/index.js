@@ -1,14 +1,12 @@
 // dependencies
 import Link from 'next/link';
 
-// content
-import { footerNavLinks, footerSocialIcons } from './content';
-
 // partials
 import Logo from '../logo';
 
 const Footer = ({
-    siteTitle
+    siteTitle,
+    content: { footerNavLinks, footerSocialIcons, footerDescription }
 }) => {
 
     return (
@@ -53,7 +51,7 @@ const Footer = ({
 
                         <div className='footer-copyright-statement'>
                             <p className='footer-small-text'>
-                                {siteTitle} has the exclusive rights to these jawnz *insert copyright symbol*
+                                {siteTitle} {footerDescription}
                             </p>
                         </div>
 
