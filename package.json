@@ -1,5 +1,6 @@
 {
   "name": "react-components",
+  "description": "React Components Template",
   "version": "0.1.0",
   "private": true,
   "scripts": {

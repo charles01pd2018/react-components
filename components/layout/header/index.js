@@ -1,7 +1,7 @@
 // dependencies
 import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
-import classNames from 'classNames';
+import classNames from 'classnames';
 
 // partials
 import Logo from '../logo';

@@ -2,7 +2,7 @@
 import { Header, Footer } from '../components/layout'
 
 // content
-import { HeaderContent, FooterContent } from './layoutContent';
+import { HeaderContent, FooterContent } from '../content/layoutContent';
 
 const DefaultLayout = ({
     children
