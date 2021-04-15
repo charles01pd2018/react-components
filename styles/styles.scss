@@ -7,32 +7,33 @@ $breakpoint--medium:                800px;      // anything under is a mobile sc
 /*--------------------------------------------------------------
 # Global
 --------------------------------------------------------------*/
-@import "base", "globals";
+@import 'base', 'globals';
 
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-@import "layout/common", "layout/header", "layout/footer";
+@import 'components/layout/common', 'components/layout/header', 
+    'components/layout/footer', 'components/layout/sidebar';
 
 /*--------------------------------------------------------------
 # Shapes
 --------------------------------------------------------------*/
-@import "shapes/hamburger", "shapes/chevron";
+@import 'shapes/hamburger', 'shapes/chevron';
 
 /*--------------------------------------------------------------
 # Animations
 --------------------------------------------------------------*/
-@import "animations";
+@import 'animations';
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-@import "components/gridPanel", "components/hero", 
-    "components/flexPanel", "components/gridSection",
-    "components/carousel", "components/imageGallery";
+@import 'components/gridPanel', 'components/hero', 
+    'components/flexPanel', 'components/gridSection',
+    'components/carousel', 'components/imageGallery';
 
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-@import "components/elements/imageOverlay", 
-    "components/elements/tags", "components/elements/imageBackground";
+@import 'components/elements/imageOverlay', 
+    'components/elements/tags', 'components/elements/imageBackground';

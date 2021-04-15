@@ -77,7 +77,7 @@ const Header = ({
                                             <Link href={mainLinkDestination}><a>{mainLinkTitle}</a></Link>
                                         </li>
                                     );
-                                })
+                                 } )
                             }
                         </ul>
                     </nav>

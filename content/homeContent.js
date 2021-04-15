@@ -1,6 +1,6 @@
 export const HeroContent = {
     heroTitle: "React Components Reference",
-    heroDescription: "I want to see what Verdana looks like in paragraph form"
+    heroDescription: "reference of useful react components :-D"
 };
 
 export const WaveHeroContent = {

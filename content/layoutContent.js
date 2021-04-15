@@ -125,3 +125,15 @@ export const FooterContent = {
     ],
     footerDescription: 'has the exclusive rights to these jawnz *insert copyright symbol*'
 };
+
+export const SidebarContent = {
+    sidebarNavLinks: [
+        {
+            mainLink: {
+                mainLinkTitle: 'Design',
+                mainLinkDestination: '/design' 
+            },
+            subLinks: []
+        },
+    ]
+};
