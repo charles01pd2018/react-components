@@ -10,19 +10,18 @@
         position: fixed;
         width: 30%;
         height: 100%;
-    
         background-color: #fff;
         left: -200px;
         top: 0;
         height: 100%;
-        
-        overflow-y: auto;
-        overflow-x: visible;
-
         z-index: 11;
+
         visibility: hidden; // don't show until sidebar is targeted
-        
         transition: left 0.5s ease;
+
+        @media (max-width: $breakpoint--medium) {
+            width: 100%;
+        }
 
         .sidebar-close {
             position: absolute;
@@ -38,7 +37,7 @@
             display: grid;
             grid-template-rows: repeat(auto-fill, 1fr);
             gap: 1rem;
-            padding: 2rem;
+            padding: 3rem;
             justify-content: center;
             list-style-type: none;
 
