@@ -130,6 +130,13 @@ export const SidebarContent = {
     sidebarNavLinks: [
         {
             mainLink: {
+                mainLinkTitle: 'Home',
+                mainLinkDestination: '/' 
+            },
+            subLinks: []
+        },
+        {
+            mainLink: {
                 mainLinkTitle: 'Design',
                 mainLinkDestination: '/design' 
             },

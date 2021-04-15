@@ -5,4 +5,67 @@
         top: 50%;
         left: 1rem;
     }
+
+    .sidebar-nav-wrapper {
+        position: fixed;
+        width: 30%;
+        height: 100%;
+    
+        background-color: #fff;
+        left: -200px;
+        top: 0;
+        height: 100%;
+        
+        overflow-y: auto;
+        overflow-x: visible;
+
+        z-index: 11;
+        visibility: hidden; // don't show until sidebar is targeted
+        
+        transition: left 0.5s ease;
+
+        .sidebar-close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+
+            .sidebar-close-icon {
+                font-size: 2rem;
+            }
+        }
+
+        .sidebar-links-wrapper {
+            display: grid;
+            grid-template-rows: repeat(auto-fill, 1fr);
+            gap: 1rem;
+            padding: 2rem;
+            justify-content: center;
+            list-style-type: none;
+
+            .sidebar-link-item {
+                padding: 1rem;
+                text-align: center;
+                border-bottom: 5px solid var(--main-color);
+                border-radius: 5px;
+            }
+        }
+
+        &:target {
+            visibility: visible;
+            left: 0;
+
+            +.sidebar-backdrop {
+                position: fixed;
+                display: block;  
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 100;
+                background-color: rgba(0,0,0,.85);
+                cursor: default;
+                z-index: 10;
+            }
+        }
+    }
 }
