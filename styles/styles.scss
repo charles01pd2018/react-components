@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 $breakpoint--large:                 1025px;     // anything under is a tablet screen   
 $breakpoint--medium:                800px;      // anything under is a mobile screen
+$breakpoint--small:                 600px;      // anything under is definitely a mobile screen
 
 /*--------------------------------------------------------------
 # Global
@@ -10,10 +11,9 @@ $breakpoint--medium:                800px;      // anything under is a mobile sc
 @import 'base', 'globals';
 
 /*--------------------------------------------------------------
-# Layout
+# Animations
 --------------------------------------------------------------*/
-@import 'components/layout/common', 'components/layout/header', 
-    'components/layout/footer', 'components/layout/sidebar';
+@import 'animations';
 
 /*--------------------------------------------------------------
 # Shapes
@@ -21,9 +21,9 @@ $breakpoint--medium:                800px;      // anything under is a mobile sc
 @import 'shapes/hamburger', 'shapes/chevron';
 
 /*--------------------------------------------------------------
-# Animations
+# Layout
 --------------------------------------------------------------*/
-@import 'animations';
+@import 'layout/groofs';
 
 /*--------------------------------------------------------------
 # Components
@@ -31,6 +31,12 @@ $breakpoint--medium:                800px;      // anything under is a mobile sc
 @import 'components/gridPanel', 'components/hero', 
     'components/flexPanel', 'components/gridSection',
     'components/carousel', 'components/imageGallery';
+
+/*--------------------------------------------------------------
+# Components Layout
+--------------------------------------------------------------*/
+@import 'components/layout/common', 'components/layout/header', 
+'components/layout/footer', 'components/layout/sidebar';
 
 /*--------------------------------------------------------------
 # Elements

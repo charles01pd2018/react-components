@@ -1,0 +1,39 @@
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+$gapBasis:                      1%; // relative gap between wrappers
+
+/*--------------------------------------------------------------
+# Styling
+--------------------------------------------------------------*/
+.groofs-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    $columns: 16;
+}
+
+.groofs-wrapper {
+    $width: 16;
+    $initialBasis: calc( $width / $columns * 100% );
+    $gap: calc( ( $columns - $width ) * $gapBasis );
+    flex-basis: calc( $initialBasis - $gap );
+
+    padding: 1rem;
+    border: 5px solid var(--secondary-color);
+}
+
+@media (min-width: $breakpoint--large) {
+    #groof-1 { $width: 5; }
+    #groof-2 { $width: 6; }
+    #groof-3 { $width: 2; }
+    #groof-4 { $width: 3; }
+}
+
+@media (min-width: $breakpoint--medium) {
+
+}
+
+@media (min-width: $breakpoint--small) {
+
+}

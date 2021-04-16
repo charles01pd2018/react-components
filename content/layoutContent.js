@@ -14,6 +14,13 @@ const SIDEBAR_CONTENT_SHARED = {
             },
             subLinks: []
         },
+        {
+            mainLink: {
+                mainLinkTitle: 'Groofs',
+                mainLinkDestination: '/groofs' 
+            },
+            subLinks: []
+        },
     ]
 };
 
