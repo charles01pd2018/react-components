@@ -35,7 +35,7 @@ const Sidebar = ({
         <header id={id} className='sidebar-container'>
             <a id='sidebar-menu-toggle' href='#sidebar-menu' aria-label='open sidebar menu'>
                 <div className='sidebar-toggle'>
-                    <span class='screen-reader'>open sidebar menu</span>
+                    <span className='screen-reader'>open sidebar menu</span>
                     <span className='chevron right site-link'></span>
                 </div>
             </a>
@@ -50,7 +50,7 @@ const Sidebar = ({
                         sidebarNavLinks.map( linkObject => {
                             const { mainLinkTitle, mainLinkDestination } = linkObject.mainLink;
                             return (
-                                <li className='sidebar-link-item site-link'>
+                                <li key={mainLinkTitle} className='sidebar-link-item site-link'>
                                     <Link href={mainLinkDestination}>
                                         <a>{mainLinkTitle}</a>
                                     </Link>

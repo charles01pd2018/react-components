@@ -1,39 +1,74 @@
-/*--------------------------------------------------------------
-# Variables
---------------------------------------------------------------*/
-$gapBasis:                      1%; // relative gap between wrappers
-
-/*--------------------------------------------------------------
-# Styling
---------------------------------------------------------------*/
 .groofs-container {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    $columns: 16;
-}
 
-.groofs-wrapper {
-    $width: 16;
-    $initialBasis: calc( $width / $columns * 100% );
-    $gap: calc( ( $columns - $width ) * $gapBasis );
-    flex-basis: calc( $initialBasis - $gap );
+    --columns: 16; // total number of columns for the container, represents 100% of the container's width
+    
+    .groofs-wrapper {
+        --width: 16; // indvidual widths for each section, represents a percentage of the total columns
+        --gap-basis: 0.3%; // relative gap between the sections
 
-    padding: 1rem;
-    border: 5px solid var(--secondary-color);
-}
-
-@media (min-width: $breakpoint--large) {
-    #groof-1 { $width: 5; }
-    #groof-2 { $width: 6; }
-    #groof-3 { $width: 2; }
-    #groof-4 { $width: 3; }
-}
-
-@media (min-width: $breakpoint--medium) {
-
+        --initial-basis: calc( var(--width) / var(--columns) * 100% ); // width of each section wrapper
+        --gap: calc( ( var(--columns) - var(--width) ) * var(--gap-basis) ); // gap between each section wrapper
+        flex-basis: calc( var(--initial-basis) - var(--gap) ); // actual width each section will occupy in the container, factoring in the gap
+    
+        border: 5px solid var(--secondary-color);
+    }
 }
 
 @media (min-width: $breakpoint--small) {
+    .groofs-container {
+        --columns: 11;
+    }
 
+    #groof-1 { 
+        --width: 5; 
+        order: 1;
+    }
+
+    #groof-2 { 
+        --width: 6; 
+        order: 2;
+    }
+
+    #groof-3 { 
+        --width: 11; 
+        order: 3;
+    }
+
+    #groof-4 { 
+        --width: 11; 
+        order: 4;
+    }
+}
+
+@media (min-width: $breakpoint--medium) {
+    .groofs-container {
+        --columns: 14;
+    }
+
+    #groof-3 { 
+        --width: 14; 
+        order: 4;
+    }
+
+    #groof-4 { 
+        --width: 3; 
+        order: 3;
+    }
+}
+
+@media (min-width: $breakpoint--large) {
+    .groofs-container {
+        --columns: 16;
+    }
+
+    #groof-3 { 
+        --width: 2; 
+        order: 3;
+    }
+    #groof-4 {
+        order: 4;
+    }
 }

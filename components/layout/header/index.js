@@ -9,7 +9,7 @@ import Logo from '../logo';
 
 const Header = ({
     siteTitle,
-    content: { headerNavLinks }
+    content: { headerNavLinks=[] }
 }) => {
 
     /* HOOKS */
@@ -41,6 +41,7 @@ const Header = ({
 
     /* CLASSNAMES */
     const headerLinksWrapperClasses = classNames( 'header-links-wrapper', mobileHeaderActive === true ? 'header-mobile-active' : 'header-mobile-not-active' );
+    const hamburgerButtonClasses = classNames( 'header-nav-toggle', headerNavLinks.length === 0 ? 'hide' : '' );
     const hamburgerInnerClasses = classNames( 'hamburger-inner', mobileHeaderActive === true ? 'off-nav-is-active': '' )
 
     useEffect( () => {
@@ -61,8 +62,8 @@ const Header = ({
                     </div>
 
                     <nav ref={navRef} className='header-nav-menu'>
-                        <button onClick={hamburgerOnClick} className="header-nav-toggle">
-                            <span className="screen-reader">menu icon</span>
+                        <button onClick={hamburgerOnClick} className={hamburgerButtonClasses}>
+                            <span className='screen-reader'>menu icon</span>
                             <span aria-label='menu-icon' className="hamburger">
                                 <span className={hamburgerInnerClasses}></span>
                             </span>

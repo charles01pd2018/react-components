@@ -26,8 +26,8 @@ const Footer = ({
 
                                             <ul className='footer-category-links-wrapper'>
                                                 {
-                                                    categoryLinks.map( ({ linkTitle, linkDestination }) => (
-                                                        <li key={linkTitle} className='footer-list-item site-link'>
+                                                    categoryLinks.map( ({ linkTitle, linkDestination }, index) => (
+                                                        <li key={`${linkTitle}-${index}`} className='footer-list-item site-link'>
                                                             <Link href={linkDestination}><a>{linkTitle}</a></Link>
                                                         </li>
                                                     ) )
