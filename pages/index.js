@@ -5,6 +5,7 @@ import { Hero, WaveHero } from '../components/hero';
 import { GridPanel, FlexPanel, GridSection, Carousel, ImageGallery } from '../components';
 // content
 import { HeroContent, WaveHeroContent, CarouselContent, ImageGalleryContent, GridSectionContent, GridPanelContent, FlexPanelContent } from '../content/homeContent';
+import { HomeLayoutContent } from '../content/layoutContent';
 // layout
 import { DefaultLayout } from '../layout';
 
@@ -12,7 +13,7 @@ import { DefaultLayout } from '../layout';
 const Home = ({
 }) => {
   return (
-    <DefaultLayout>
+    <DefaultLayout content={HomeLayoutContent}>
         <Head>
             <title>React Components Template</title>
         </Head>

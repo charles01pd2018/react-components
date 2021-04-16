@@ -3,18 +3,18 @@ import Head from 'next/head';
 // layout
 import { DefaultLayout } from '../../layout';
 // content
-import { DesignLayoutContent } from '../../content/layoutContent';
+import { GroofsLayoutContent } from '../../content/layoutContent';
 
 const Design = ({
 }) => {
 
     return (
-        <DefaultLayout content={DesignLayoutContent}>
+        <DefaultLayout content={GroofsLayoutContent}>
             <Head>
-                <title>Design</title>
+                <title>Groofs</title>
             </Head>
             <div className='container'>
-                <h1>Design Page</h1>
+                <h1>!Groofs!</h1>
             </div>
         </DefaultLayout>
     );

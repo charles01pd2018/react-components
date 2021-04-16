@@ -1,6 +1,6 @@
 export const Hero = ({
     id,
-    content: { heroTitle, heroDescription }
+    content: { heroTitle='', heroDescription='' }
 }) => {
 
     return (
@@ -15,7 +15,7 @@ export const Hero = ({
 
 export const WaveHero = ({
     id,
-    content: { waveHeroTitle, waveHeroDescription }
+    content: { waveHeroTitle='', waveHeroDescription='' }
 }) => {
 
     return (

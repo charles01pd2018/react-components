@@ -7,7 +7,7 @@ import { ImageOverlay } from '../elements';
 
 const GridSection = ({
     id,
-    content: { gridSectionTitle, gridSectionDescription, gridSectionImages },
+    content: { gridSectionTitle='', gridSectionDescription='', gridSectionImages=[] },
     alignImage='left' // 'left' || 'right'
 }) => {
 

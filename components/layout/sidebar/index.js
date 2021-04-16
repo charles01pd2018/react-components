@@ -1,10 +1,35 @@
 // dependencies
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
+
+const handleIdPath = ( pathString ) => {
+    const idIndex = pathString.indexOf('#');
+    if ( idIndex === -1 ) return '#';
+
+    return pathString.slice( idIndex );
+}
 
 const Sidebar = ({
     id,
     content: { sidebarNavLinks }
 }) => {
+
+    /* HOOKS */
+    const router = useRouter();
+    const path = router.asPath;
+    const [ idPath, setIdPath ] = useState( handleIdPath(path) ); 
+
+    const handleRouteChange = ( url ) => {
+        setIdPath( handleIdPath( url ) );
+    }
+
+    useEffect(() => {
+        router.events.on('hashChangeStart', handleRouteChange)
+        return () => {
+          router.events.off('hashChangeStart', handleRouteChange)
+        }
+      }, [] );
 
     return (
         <header id={id} className='sidebar-container'>
@@ -16,7 +41,7 @@ const Sidebar = ({
             </a>
 
             <nav id='sidebar-menu' className='sidebar-nav-wrapper' aria-label='sidebar-menu'>
-                <a className='sidebar-close' href='#' id='sidebar-menu-close' aria-label='close sidebar menu'>
+                <a className='sidebar-close' href={idPath} id='sidebar-menu-close' aria-label='close sidebar menu'>
                     <span className='screen-reader'>close sidebar menu</span>
                     <span className='sidebar-close-icon' aria-hidden='true'>&times;</span>
                 </a>
@@ -35,7 +60,7 @@ const Sidebar = ({
                     }
                 </ul>
             </nav>
-            <a href='#' className='sidebar-backdrop' tabIndex='-1' hidden></a>
+            <a href={idPath} className='sidebar-backdrop' tabIndex='-1' hidden></a>
         </header>
     );
 }

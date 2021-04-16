@@ -8,7 +8,7 @@ import { ImageBackground, Tags } from '../elements';
 
 const Carousel = ({
     id,
-    content: { carouselTitle, carouselItems }
+    content: { carouselTitle='', carouselItems=[] }
 }) => {
 
     /* HOOKS */

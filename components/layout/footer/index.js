@@ -6,7 +6,7 @@ import Logo from '../logo';
 
 const Footer = ({
     siteTitle,
-    content: { footerNavLinks, footerSocialIcons, footerDescription }
+    content: { footerNavLinks=[], footerSocialIcons=[], footerDescription='' }
 }) => {
 
     return (

@@ -4,7 +4,7 @@ import Card from './card';
 
 const GridPanel = ({
     id,
-    content: { gridPanelTitle, gridPanelCards }
+    content: { gridPanelTitle='', gridPanelCards=[] }
 }) => {
 
     return (

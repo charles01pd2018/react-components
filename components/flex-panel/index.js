@@ -3,7 +3,7 @@ import Card from './card';
 
 const FlexPanel = ({
     id,
-    content: { flexPanelTitle, flexPanelCards }
+    content: { flexPanelTitle='', flexPanelCards=[] }
 }) => {
 
     return (

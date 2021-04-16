@@ -1,6 +1,6 @@
 const ImageGallery = ({
     id,
-    content: { imageGalleryTitle, imageGalleryDescription, imageGalleryImages }
+    content: { imageGalleryTitle='', imageGalleryDescription='', imageGalleryImages=[] }
 }) => {
 
     return (
