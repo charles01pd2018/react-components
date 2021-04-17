@@ -35,7 +35,10 @@ const Table = ({
                             ) )
                         }
                 </tbody>             
-
+                
+                <tfoot className='table-foot'>
+                    This would be the sum of the stuffs 
+                </tfoot>
             </table>
         </section>
     );
