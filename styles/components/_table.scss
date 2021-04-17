@@ -1,0 +1,81 @@
+.table-container {
+    overflow-x: auto; // enables scrolling when table gets too big
+
+    .table-wrapper { 
+        width: 100%; // expand flex container to full content
+        
+        border: 5px solid var(--main-color);
+        border-collapse: collapse;
+
+        .table-caption {
+            font-weight: bold;
+            padding: 1rem;
+        }
+
+        .table-row { // apply to all table rows regardless of it being a head or body
+            border-bottom: 1px solid black;
+        }
+
+        .tabel-cell { // apply to all tabel cells regardless of it being a head or body
+            padding: 2rem; 
+        }
+
+        .table-head {
+            .table-row {
+                // push table head title rows off the screen
+                position: absolute;
+                top: -100rem;
+                left: -100rem;
+            }
+        }
+
+        .table-body {  
+            .table-row {
+                .table-body-cell {
+                    // !IMPORTANT! makes mobile table cells flex container to make it fit screen
+                    display: flex;
+                    flex-flow: row wrap;
+
+                    // ADD CONTENT BEFORE AND AFTER FOR EACH ROW - DON'T DO THIS MANUALLY. FIND A WAY TO USE JS OR SMTHING
+                    &:nth-of-type(1) {
+                        &:before {
+                        }
+
+                        &:after {
+
+                        }
+                    }
+                }
+
+                &:nth-child(odd) {
+                    background-color: var(--neutral-background);
+                }
+            }
+        }
+
+        @media (min-width: $breakpoint--large) {
+            display: table;
+
+            .table-head {
+                .table-row {
+                    position: static; // put the table heading back on the screen
+                }
+            }
+
+            .table-body {
+                .table-row {
+                    .table-body-cell {
+                        // !IMPORTANT! converts table cells back to original table format
+                        display: table-cell;
+
+                        &:nth-of-type(n) {
+                            &::before, &::after {
+                                content: '';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -21,6 +21,13 @@ const SIDEBAR_CONTENT_SHARED = {
             },
             subLinks: []
         },
+        {
+            mainLink: {
+                mainLinkTitle: 'Contact',
+                mainLinkDestination: '/contact' 
+            },
+            subLinks: []
+        },
     ]
 };
 
@@ -177,6 +184,28 @@ export const DesignLayoutContent = {
 };
 
 export const GroofsLayoutContent = {
+    headerContent: {
+        headerNavLinks: []
+    },
+    sidebarContent: SIDEBAR_CONTENT_SHARED,
+    footerContent: {
+        footerSocialIcons: [
+            {
+                socialIconType: 'twitter icon',
+                socialIconPath: '/static/social/twitter.svg',
+                socialIconDestination: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+            },
+            {
+                socialIconType: 'linkedin icon',
+                socialIconPath: '/static/social/linkedin.svg',
+                socialIconDestination: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+            },
+        ],
+        footerDescription: 'has the exclusive rights to these jawnz *insert copyright symbol*'
+    },
+};
+
+export const ContactLayoutContent = {
     headerContent: {
         headerNavLinks: []
     },

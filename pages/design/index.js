@@ -2,8 +2,12 @@
 import Head from 'next/head';
 // layout
 import { DefaultLayout } from '../../layout';
+// components
+import { Table } from '../../components';
+import { Hero } from '../../components/hero';
 // content
 import { DesignLayoutContent } from '../../content/layoutContent';
+import { HeroContent, TableContent } from '../../content/designContent';
 
 const Design = ({
 }) => {
@@ -13,9 +17,9 @@ const Design = ({
             <Head>
                 <title>Design</title>
             </Head>
-            <div className='container'>
-                <h1>Design Page</h1>
-            </div>
+            
+            <Hero id='design-page-title' content={HeroContent} />
+            <Table id='table' content={TableContent} />
         </DefaultLayout>
     );
 }
