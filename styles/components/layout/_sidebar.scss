@@ -7,6 +7,9 @@
     }
 
     .sidebar-nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: fixed;
         width: 30%;
         height: 100%;
@@ -34,16 +37,15 @@
         }
 
         .sidebar-links-wrapper {
-            display: grid;
-            grid-template-rows: repeat(auto-fill, 1fr);
-            gap: 1rem;
             padding: 3rem;
             justify-content: center;
             list-style-type: none;
 
             .sidebar-link-item {
+                margin: 1rem;
                 padding: 1rem;
                 text-align: center;
+
                 border-bottom: 5px solid var(--main-color);
                 border-radius: 5px;
             }
